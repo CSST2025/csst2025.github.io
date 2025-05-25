@@ -1,0 +1,1071 @@
+---
+layout: none
+permalink: /tools/impact-pathways/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociotechnical Research Impact Pathways</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .filters {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            min-width: 150px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--secondary);
+            background: white;
+            color: var(--secondary);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .filter-btn.active {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .pathways-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .pathway-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pathway-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .pathway-card.hidden {
+            display: none;
+        }
+
+        .pathway-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .pathway-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pathway-number {
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .pathway-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .pathway-content {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .content-section {
+            border-left: 3px solid var(--secondary);
+            padding-left: 1rem;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .directionality-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .direction-tag {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .direction-tag.primary {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .direction-tag.secondary {
+            background: var(--light);
+            color: var(--dark);
+            border-color: var(--secondary);
+        }
+
+        .direction-tag.not-applicable {
+            background: #f8f9fa;
+            color: #999;
+            border-color: #ddd;
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .risk-indicator {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .risk-low { background: #d4edda; color: #155724; }
+        .risk-medium { background: #fff3cd; color: #856404; }
+        .risk-high { background: #f8d7da; color: #721c24; }
+
+        .timeline-bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            position: relative;
+            margin: 0.5rem 0;
+        }
+
+        .timeline-fill {
+            background: var(--success);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .examples-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .examples-list li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .examples-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .industry-note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .industry-note strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .filter-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .filter-group label {
+                min-width: auto;
+            }
+            
+            .pathway-header {
+                flex-direction: column;
+            }
+            
+            .pathway-number {
+                margin-top: 1rem;
+            }
+        }
+
+        .legend {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .legend-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .url-params-note {
+            background: #ffeaa7;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .highlighted {
+            border: 3px solid var(--warning);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sociotechnical Research Impact Pathways</h1>
+            <p class="subtitle">A comprehensive taxonomy for planning and understanding research impact</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="url-params-note" id="urlNote">
+            <strong>Note:</strong> Filters have been applied based on your planning assessment.
+            <button class="btn btn-secondary" onclick="clearHighlights()" style="margin-left: 1rem;">Clear All</button>
+        </div>
+
+        <div class="legend">
+            <div class="legend-title">Understanding Directionality of Engagement</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="direction-tag primary">Primary mode</span>
+                    <span>Most common approach</span>
+                </div>
+                <div class="legend-item">
+                    <span class="direction-tag secondary">Secondary mode</span>
+                    <span>Sometimes used</span>
+                </div>
+                <div class="legend-item">
+                    <span class="direction-tag not-applicable">Not applicable</span>
+                    <span>Rarely or never used</span>
+                </div>
+            </div>
+            <div style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                <strong>Directionality Types:</strong> One-way (push) • Two-way (exchange) • Co-production (integrated) • Community-led (pull)
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>Filter by Directionality:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="directionality" data-value="all">All</button>
+                    <button class="filter-btn" data-filter="directionality" data-value="one-way">One-way</button>
+                    <button class="filter-btn" data-filter="directionality" data-value="two-way">Two-way</button>
+                    <button class="filter-btn" data-filter="directionality" data-value="co-production">Co-production</button>
+                    <button class="filter-btn" data-filter="directionality" data-value="community-led">Community-led</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Filter by Timeline:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="timeline" data-value="all">All</button>
+                    <button class="filter-btn" data-filter="timeline" data-value="immediate">Immediate (< 1 year)</button>
+                    <button class="filter-btn" data-filter="timeline" data-value="short">Short (1-2 years)</button>
+                    <button class="filter-btn" data-filter="timeline" data-value="medium">Medium (3-5 years)</button>
+                    <button class="filter-btn" data-filter="timeline" data-value="long">Long (5+ years)</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Filter by Risk Level:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="risk" data-value="all">All</button>
+                    <button class="filter-btn" data-filter="risk" data-value="low">Low Risk</button>
+                    <button class="filter-btn" data-filter="risk" data-value="medium">Medium Risk</button>
+                    <button class="filter-btn" data-filter="risk" data-value="high">High Risk</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Filter by Resources:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="resources" data-value="all">All</button>
+                    <button class="filter-btn" data-filter="resources" data-value="minimal">Minimal</button>
+                    <button class="filter-btn" data-filter="resources" data-value="moderate">Moderate</button>
+                    <button class="filter-btn" data-filter="resources" data-value="substantial">Substantial</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pathways-grid" id="pathwaysGrid">
+            <!-- Pathway cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Pathway data
+        const pathways = [
+            {
+                id: 1,
+                title: "Knowledge Creation & Dissemination",
+                description: "Traditional academic outputs that advance scholarly understanding and methods",
+                directionality: {
+                    "One-way": "primary",
+                    "Two-way": "secondary",
+                    "Co-production": "not-applicable",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "medium",
+                risk: "low",
+                resources: "moderate",
+                requirements: [
+                    "Strong research methodology skills",
+                    "Academic writing proficiency",
+                    "Access to publication venues",
+                    "Peer review network"
+                ],
+                resourceDetails: {
+                    time: "20-40% of research time",
+                    funding: "Conference travel, publication fees",
+                    team: "Can be done solo or with small team"
+                },
+                timelineDetails: {
+                    immediate: "Conference presentations, working papers",
+                    short: "Journal articles, book chapters",
+                    medium: "Books, establishing research program",
+                    long: "Field-defining contributions"
+                },
+                riskProfile: {
+                    professional: "Low - expected academic activity",
+                    personal: "Low - minimal public exposure",
+                    reputational: "Low - peer review provides quality control"
+                },
+                successIndicators: [
+                    "Citation counts and h-index",
+                    "Journal impact factors",
+                    "Invited talks and keynotes",
+                    "Research awards and grants"
+                ],
+                commonCombinations: [
+                    "Educational Impact (training next generation)",
+                    "Infrastructure Building (methods/tools)",
+                    "Public Engagement (science communication)"
+                ],
+                examples: [
+                    "Publishing in ACM CHI on new interaction techniques",
+                    "Theoretical framework in Information Systems journal",
+                    "Methods paper in Computational Social Science venue",
+                    "Contributing to W3C or IEEE standards development",
+                    "Consulting for tech companies on research applications"
+                ],
+                industryNote: "In industry settings, this might include publishing in industry research labs, contributing to technical standards, or presenting at industry conferences. IP considerations often limit what can be shared publicly. Consulting work often bridges academic knowledge to industry applications."
+            },
+            {
+                id: 2,
+                title: "Educational & Capacity Building",
+                description: "Developing human capital through formal and informal education, training, and skill development",
+                directionality: {
+                    "One-way": "secondary",
+                    "Two-way": "primary",
+                    "Co-production": "secondary",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "short",
+                risk: "low",
+                resources: "moderate",
+                requirements: [
+                    "Pedagogical skills or willingness to develop them",
+                    "Access to learners (students, professionals, community members)",
+                    "Curriculum development capabilities",
+                    "Assessment and feedback skills"
+                ],
+                resourceDetails: {
+                    time: "30-50% for formal teaching, 10-20% for workshops",
+                    funding: "Materials, venue, participant support",
+                    team: "Often requires teaching assistants or co-facilitators"
+                },
+                timelineDetails: {
+                    immediate: "Workshops, bootcamps, tutorials",
+                    short: "Course development, certificate programs",
+                    medium: "Curriculum reform, degree programs",
+                    long: "Institutional transformation, field-wide adoption"
+                },
+                riskProfile: {
+                    professional: "Low - valued in most institutions",
+                    personal: "Low to medium - depends on audience",
+                    reputational: "Low - generally seen as service"
+                },
+                successIndicators: [
+                    "Number of people trained",
+                    "Skill assessment improvements",
+                    "Career trajectories of trainees",
+                    "Adoption of materials by others"
+                ],
+                commonCombinations: [
+                    "Community Partnership (capacity building focus)",
+                    "Innovation (training on new tools/methods)",
+                    "Public Engagement (public education)"
+                ],
+                examples: [
+                    "Data literacy workshops for journalists",
+                    "AI ethics course for computer science students",
+                    "Community technology training programs",
+                    "Professional development for UX practitioners",
+                    "Citizen science training for environmental monitoring"
+                ],
+                industryNote: "Industry capacity building often focuses on upskilling employees, developing technical certifications, or creating industry-wide training standards. May include partnerships with universities or online platforms."
+            },
+            {
+                id: 3,
+                title: "Community Partnership & Empowerment",
+                description: "Research conducted with and for communities, emphasizing shared power and mutual benefit",
+                directionality: {
+                    "One-way": "not-applicable",
+                    "Two-way": "secondary",
+                    "Co-production": "primary",
+                    "Community-led": "primary"
+                },
+                timeline: "medium",
+                risk: "medium",
+                resources: "substantial",
+                requirements: [
+                    "Cultural humility and communication skills",
+                    "Existing relationships or time to build them",
+                    "Flexible research methods",
+                    "Institutional support for non-traditional outputs"
+                ],
+                resourceDetails: {
+                    time: "40-60% of research time",
+                    funding: "Community compensation, events, materials",
+                    team: "Requires diverse team including community members"
+                },
+                timelineDetails: {
+                    immediate: "Initial engagement and trust building",
+                    short: "Co-designed pilot projects",
+                    medium: "Sustained partnerships, initial outcomes",
+                    long: "Community-owned solutions, systemic change"
+                },
+                riskProfile: {
+                    professional: "Medium - not always valued for tenure",
+                    personal: "Medium - requires significant time investment",
+                    reputational: "Medium - success depends on relationships"
+                },
+                successIndicators: [
+                    "Quality of partnerships (trust, reciprocity)",
+                    "Community-defined outcomes achieved",
+                    "Sustainability of initiatives",
+                    "Community capacity increases"
+                ],
+                commonCombinations: [
+                    "Policy Influence (community-driven advocacy)",
+                    "Educational Impact (community knowledge sharing)",
+                    "Infrastructure Building (community-owned resources)"
+                ],
+                examples: [
+                    "Participatory design of health apps with patients",
+                    "Community-based environmental monitoring systems",
+                    "Co-created digital literacy programs",
+                    "<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2774214/' target='_blank'>Community-Based Participatory Research (CBPR)</a> health interventions",
+                    "Citizen science projects like <a href='https://www.inaturalist.org/' target='_blank'>iNaturalist</a> or <a href='https://ebird.org/' target='_blank'>eBird</a>",
+                    "Participatory Action Research (PAR) with marginalized communities"
+                ],
+                industryNote: "In industry, this might look like user research, co-design with customers, or corporate-community partnerships. Success often measured by user adoption and satisfaction rather than community empowerment. Recognized frameworks like CBPR can help legitimize this work in academic settings."
+            },
+            {
+                id: 4,
+                title: "Policy & Governance Influence",
+                description: "Shaping decisions, regulations, and governance through evidence and expertise",
+                directionality: {
+                    "One-way": "secondary",
+                    "Two-way": "primary",
+                    "Co-production": "secondary",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "medium",
+                risk: "high",
+                resources: "moderate",
+                requirements: [
+                    "Policy literacy and political awareness",
+                    "Ability to synthesize and communicate clearly",
+                    "Relationships with policy makers or intermediaries",
+                    "Timing and strategic thinking"
+                ],
+                resourceDetails: {
+                    time: "20-40% during active engagement",
+                    funding: "Travel, report production, event hosting",
+                    team: "Benefits from policy-savvy collaborators"
+                },
+                timelineDetails: {
+                    immediate: "Policy briefs, expert testimony",
+                    short: "Advisory committee participation",
+                    medium: "Policy adoption or revision",
+                    long: "Systemic governance changes"
+                },
+                riskProfile: {
+                    professional: "High - can be seen as political",
+                    personal: "High - potential for public criticism",
+                    reputational: "High - outcomes often beyond control"
+                },
+                successIndicators: [
+                    "Policies influenced or adopted",
+                    "Citations in policy documents",
+                    "Advisory appointments",
+                    "Media coverage of recommendations"
+                ],
+                commonCombinations: [
+                    "Knowledge Creation (evidence base)",
+                    "Public Engagement (building support)",
+                    "Community Partnership (grassroots advocacy)"
+                ],
+                examples: [
+                    "Algorithmic bias research influencing AI regulation",
+                    "Privacy research shaping data protection laws",
+                    "Digital divide studies informing broadband policy",
+                    "Participating in <a href='https://www.w3.org/WAI/' target='_blank'>W3C Web Accessibility Initiative</a>",
+                    "Contributing to <a href='https://www.nist.gov/privacy-framework' target='_blank'>NIST Privacy Framework</a>",
+                    "Serving on social media platform advisory boards (e.g., Meta's Oversight Board)",
+                    "Expert testimony for congressional hearings on tech policy"
+                ],
+                industryNote: "Industry researchers might engage through standards bodies, industry associations, or regulatory comments. Often focused on shaping favorable regulatory environments while maintaining ethical standards. Working groups in areas like privacy (IAPP), AI ethics (Partnership on AI), or platform governance are key venues."
+            },
+            {
+                id: 5,
+                title: "Innovation & Applied Solutions",
+                description: "Creating tangible technologies, tools, or interventions that directly address problems",
+                directionality: {
+                    "One-way": "secondary",
+                    "Two-way": "primary",
+                    "Co-production": "secondary",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "short",
+                risk: "medium",
+                resources: "substantial",
+                requirements: [
+                    "Technical development skills",
+                    "Understanding of user needs",
+                    "Prototyping and testing capabilities",
+                    "IP and commercialization knowledge"
+                ],
+                resourceDetails: {
+                    time: "50-80% during development phases",
+                    funding: "Development costs, user testing, deployment",
+                    team: "Often requires interdisciplinary team"
+                },
+                timelineDetails: {
+                    immediate: "Proof of concept, prototypes",
+                    short: "Beta versions, pilot deployments",
+                    medium: "Full deployment, adoption",
+                    long: "Scaled impact, spin-offs"
+                },
+                riskProfile: {
+                    professional: "Medium - success uncertain",
+                    personal: "Medium - significant time investment",
+                    reputational: "Medium - tied to product success"
+                },
+                successIndicators: [
+                    "User adoption rates",
+                    "Problem metrics improvement",
+                    "Revenue or cost savings",
+                    "Awards and recognition"
+                ],
+                commonCombinations: [
+                    "Community Partnership (user-centered design)",
+                    "Infrastructure Building (open source tools)",
+                    "Educational Impact (training on new tools)"
+                ],
+                examples: [
+                    "Crisis informatics platforms for disaster response",
+                    "Accessibility tools for web browsing",
+                    "Fair ML toolkits for practitioners",
+                    "Consulting for startups on ethical AI implementation",
+                    "Developing open source tools (e.g., <a href='https://github.com/Trusted-AI/AIF360' target='_blank'>AI Fairness 360</a>)",
+                    "Creating data visualization tools for journalists",
+                    "Building privacy-preserving analytics systems"
+                ],
+                industryNote: "This is often the primary impact mode in industry, with success measured by market adoption, revenue, or internal efficiency gains. May involve product teams and go-to-market strategies. Consulting can be a way to apply academic expertise to real-world problems while generating additional income."
+            },
+            {
+                id: 6,
+                title: "Public Engagement & Cultural Change",
+                description: "Shaping public discourse, awareness, and cultural narratives around technology and society",
+                directionality: {
+                    "One-way": "primary",
+                    "Two-way": "secondary",
+                    "Co-production": "not-applicable",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "immediate",
+                risk: "high",
+                resources: "minimal",
+                requirements: [
+                    "Communication skills for general audiences",
+                    "Media relationships or platform access",
+                    "Timing and news awareness",
+                    "Thick skin for public criticism"
+                ],
+                resourceDetails: {
+                    time: "10-30% depending on intensity",
+                    funding: "Minimal - mostly time investment",
+                    team: "Can be solo, benefits from media training"
+                },
+                timelineDetails: {
+                    immediate: "Op-eds, interviews, social media",
+                    short: "Documentary participation, book deals",
+                    medium: "Sustained media presence, thought leadership",
+                    long: "Cultural narrative shifts"
+                },
+                riskProfile: {
+                    professional: "High - may be seen as self-promotion",
+                    personal: "High - public exposure, potential harassment",
+                    reputational: "High - simplification risks, misrepresentation"
+                },
+                successIndicators: [
+                    "Media reach and engagement",
+                    "Public discourse shifts",
+                    "Invitations to public forums",
+                    "Cultural narrative changes"
+                ],
+                commonCombinations: [
+                    "Policy Influence (public pressure)",
+                    "Educational Impact (public education)",
+                    "Knowledge Creation (popular science books)"
+                ],
+                examples: [
+                    "Tech ethics commentary in major media",
+                    "Public talks on AI and society",
+                    "Social media threads explaining research",
+                    "Participating in science communication initiatives",
+                    "Writing for outlets like <a href='https://theconversation.com/' target='_blank'>The Conversation</a>",
+                    "Podcast appearances discussing tech impacts",
+                    "TED talks on sociotechnical issues"
+                ],
+                industryNote: "Industry researchers might engage through company blogs, conference keynotes, or as company representatives. Often constrained by corporate communications policies and brand considerations."
+            },
+            {
+                id: 7,
+                title: "Infrastructure & Field Building",
+                description: "Creating lasting resources, institutions, and communities that enable future work",
+                directionality: {
+                    "One-way": "secondary",
+                    "Two-way": "primary",
+                    "Co-production": "secondary",
+                    "Community-led": "not-applicable"
+                },
+                timeline: "long",
+                risk: "low",
+                resources: "substantial",
+                requirements: [
+                    "Vision for field development",
+                    "Organizational and leadership skills",
+                    "Funding acquisition capabilities",
+                    "Community building skills"
+                ],
+                resourceDetails: {
+                    time: "30-50% sustained over years",
+                    funding: "Significant - infrastructure, coordination",
+                    team: "Requires sustained collaborative effort"
+                },
+                timelineDetails: {
+                    immediate: "Working groups, initial resources",
+                    short: "Conferences, shared datasets",
+                    medium: "New journals, research centers",
+                    long: "Established fields, institutions"
+                },
+                riskProfile: {
+                    professional: "Low - generally valued as service",
+                    personal: "Medium - significant time commitment",
+                    reputational: "Low - usually seen positively"
+                },
+                successIndicators: [
+                    "Resource usage statistics",
+                    "Community growth metrics",
+                    "Derivative work enabled",
+                    "Institutional sustainability"
+                ],
+                commonCombinations: [
+                    "Knowledge Creation (venues for dissemination)",
+                    "Educational Impact (training infrastructure)",
+                    "Community Partnership (shared resources)"
+                ],
+                examples: [
+                    "Creating new conference series (e.g., <a href='https://facctconference.org/' target='_blank'>FAccT</a>)",
+                    "Building research datasets (e.g., ImageNet)",
+                    "Establishing research centers or institutes",
+                    "Founding working groups (e.g., <a href='https://privacypatterns.org/' target='_blank'>Privacy Patterns</a>)",
+                    "Creating open source communities",
+                    "Developing shared research infrastructure",
+                    "Building cross-sector consortiums (e.g., <a href='https://www.partnershiponai.org/' target='_blank'>Partnership on AI</a>)"
+                ],
+                industryNote: "Industry might create open source projects, industry consortiums, or shared research facilities. Success measured by ecosystem growth and industry-wide adoption. Standards bodies and working groups are particularly important for establishing industry-wide practices."
+            }
+        ];
+                
+
+        // Function to create pathway cards
+        function createPathwayCard(pathway) {
+            const timelineWidth = {
+                immediate: "25%",
+                short: "50%",
+                medium: "75%",
+                long: "100%"
+            };
+
+            const allDirections = ["One-way", "Two-way", "Co-production", "Community-led"];
+            const directionTags = allDirections.map(dir => {
+                const status = pathway.directionality[dir] || "not-applicable";
+                return `<span class="direction-tag ${status}">${dir}</span>`;
+            }).join('');
+
+            return `
+                <div class="pathway-card" data-id="${pathway.id}" data-timeline="${pathway.timeline}" data-risk="${pathway.risk}" data-resources="${pathway.resources}" ${getDirectionalityData(pathway.directionality)}>
+                    <div class="pathway-header">
+                        <div>
+                            <h2 class="pathway-title">${pathway.title}</h2>
+                            <p class="pathway-description">${pathway.description}</p>
+                            <div class="directionality-tags">
+                                ${directionTags}
+                            </div>
+                        </div>
+                        <div class="pathway-number">${pathway.id}</div>
+                    </div>
+
+                    <div class="pathway-content">
+                        <div class="metric-grid">
+                            <div class="metric-item">
+                                <div class="metric-label">Typical Timeline</div>
+                                <div class="metric-value">${pathway.timeline.charAt(0).toUpperCase() + pathway.timeline.slice(1)}</div>
+                                <div class="timeline-bar">
+                                    <div class="timeline-fill" style="width: ${timelineWidth[pathway.timeline]}"></div>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Risk Level</div>
+                                <div class="metric-value">
+                                    <span class="risk-indicator risk-${pathway.risk}">${pathway.risk.charAt(0).toUpperCase() + pathway.risk.slice(1)} Risk</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Resource Needs</div>
+                                <div class="metric-value">${pathway.resources.charAt(0).toUpperCase() + pathway.resources.slice(1)}</div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h3 class="section-title">Entry Requirements</h3>
+                            <ul class="examples-list">
+                                ${pathway.requirements.map(req => `<li>${req}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3 class="section-title">Success Indicators</h3>
+                            <ul class="examples-list">
+                                ${pathway.successIndicators.map(indicator => `<li>${indicator}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3 class="section-title">Common Combinations</h3>
+                            <ul class="examples-list">
+                                ${pathway.commonCombinations.map(combo => `<li>${combo}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3 class="section-title">Examples</h3>
+                            <ul class="examples-list">
+                                ${pathway.examples.map(example => `<li>${example}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="industry-note">
+                            <strong>Industry Context:</strong> ${pathway.industryNote}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Helper function to generate data attributes for directionality filtering
+        function getDirectionalityData(directionality) {
+            const activeDirections = [];
+            Object.entries(directionality).forEach(([dir, status]) => {
+                if (status === 'primary' || status === 'secondary') {
+                    activeDirections.push(dir.toLowerCase().replace(/-/g, '_'));
+                }
+            });
+            return activeDirections.map(dir => `data-${dir}="true"`).join(' ');
+        }
+
+        // Initialize the page
+        function init() {
+            const grid = document.getElementById('pathwaysGrid');
+            pathways.forEach(pathway => {
+                grid.innerHTML += createPathwayCard(pathway);
+            });
+
+            // Set up filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', handleFilter);
+            });
+
+            // Check for URL parameters
+            handleURLParams();
+        }
+
+        // Handle filtering
+        function handleFilter(e) {
+            const filterType = e.target.dataset.filter;
+            const filterValue = e.target.dataset.value;
+
+            // Update active state
+            document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`).forEach(btn => {
+                btn.classList.remove('active');
+            });
+            e.target.classList.add('active');
+
+            // Apply filters
+            applyFilters();
+        }
+
+        // Apply all active filters
+        function applyFilters() {
+            const activeFilters = {};
+            document.querySelectorAll('.filter-btn.active').forEach(btn => {
+                activeFilters[btn.dataset.filter] = btn.dataset.value;
+            });
+
+            document.querySelectorAll('.pathway-card').forEach(card => {
+                let show = true;
+
+                Object.entries(activeFilters).forEach(([filterType, filterValue]) => {
+                    if (filterValue !== 'all') {
+                        if (filterType === 'directionality') {
+                            // Special handling for directionality
+                            const dirAttribute = filterValue.replace(/-/g, '_');
+                            if (!card.hasAttribute(`data-${dirAttribute}`)) {
+                                show = false;
+                            }
+                        } else if (card.dataset[filterType] !== filterValue) {
+                            show = false;
+                        }
+                    }
+                });
+
+                card.classList.toggle('hidden', !show);
+            });
+        }
+
+
+        // Handle URL parameters for integration with planning tool
+        function handleURLParams() {
+            const params = new URLSearchParams(window.location.search);
+            const urlNote = document.getElementById('urlNote');
+            
+            // Check for highlighted pathways
+            const highlight = params.get('highlight');
+            if (highlight) {
+                const pathwayIds = highlight.split(',');
+                pathwayIds.forEach(id => {
+                    const card = document.querySelector(`.pathway-card[data-id="${id}"]`);
+                    if (card) {
+                        card.classList.add('highlighted');
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+                urlNote.style.display = 'block';
+                urlNote.innerHTML += ' Highlighted pathways are recommended based on your profile.';
+            }
+
+            // Check for filter parameters
+            const timeline = params.get('timeline');
+            const risk = params.get('risk');
+            const resources = params.get('resources');
+
+            if (timeline || risk || resources) {
+                urlNote.style.display = 'block';
+                
+                if (timeline) {
+                    const btn = document.querySelector(`.filter-btn[data-filter="timeline"][data-value="${timeline}"]`);
+                    if (btn) btn.click();
+                }
+                if (risk) {
+                    const btn = document.querySelector(`.filter-btn[data-filter="risk"][data-value="${risk}"]`);
+                    if (btn) btn.click();
+                }
+                if (resources) {
+                    const btn = document.querySelector(`.filter-btn[data-filter="resources"][data-value="${resources}"]`);
+                    if (btn) btn.click();
+                }
+            }
+        }
+
+        function clearHighlights() {
+            // Remove highlighted class from all cards
+            document.querySelectorAll('.pathway-card').forEach(card => {
+                card.classList.remove('highlighted');
+            });
+            
+            // Reset all filters
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.value === 'all') {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Show all cards
+            document.querySelectorAll('.pathway-card').forEach(card => {
+                card.classList.remove('hidden');
+            });
+            
+            // Hide the URL note
+            document.getElementById('urlNote').style.display = 'none';
+            
+            // Clear URL parameters without reloading
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

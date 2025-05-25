@@ -1,0 +1,1147 @@
+---
+layout: none
+permalink: /tools/funding-matrix/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociotechnical Research Funding Matrix 2025</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .alert {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+            overflow-x: auto;
+            display: block;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            position: sticky;
+            top: 0;
+            white-space: nowrap;
+        }
+        
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .resource-box {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .tips-box {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .nav-item {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .nav-item:hover {
+            background: #2980b9;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        
+        .warning {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .approach-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .open-call { background-color: #27ae60; color: white; }
+        .invitation { background-color: #e74c3c; color: white; }
+        .network { background-color: #f39c12; color: white; }
+        .rolling { background-color: #3498db; color: white; }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .timeline-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .timeline-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .timeline-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .subsection {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                font-size: 11px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+            
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sociotechnical Research Funding Matrix 2025</h1>
+    <p class="subtitle">A Comprehensive Guide for CSST Researchers</p>
+    
+    <div class="alert">
+        <strong>⚠️ Important Notice:</strong> As of May 2025, federal funding agencies (particularly NSF) are experiencing significant disruptions. NSF has halted new funding and terminated over 1,000 grants. Budget cuts of up to 50% are being discussed. This guide includes both current information and historical context. Always verify current status directly with funding agencies.
+    </div>
+    
+    <div class="info-box">
+        <strong>📌 About This Guide:</strong> This matrix is not exhaustive - funding landscapes change rapidly and new opportunities emerge constantly. Use this as a starting point, then dig deeper using the search strategies and resources provided. Each funding source has unique characteristics, timelines, and requirements that evolve over time.
+    </div>
+
+    <div class="section">
+        <h2>Quick Navigation</h2>
+        <div class="nav-grid">
+            <a href="#federal-civilian" class="nav-item">Federal Civilian Agencies</a>
+            <a href="#federal-defense" class="nav-item">Defense & Intelligence</a>
+            <a href="#federal-special" class="nav-item">Special Federal Programs</a>
+            <a href="#foundations" class="nav-item">Major Foundations</a>
+            <a href="#tech-industry" class="nav-item">Tech Industry Programs</a>
+            <a href="#other-industry" class="nav-item">Other Industry</a>
+            <a href="#international" class="nav-item">International Funding</a>
+            <a href="#state-local" class="nav-item">State & Local</a>
+            <a href="#search-strategies" class="nav-item">Search Strategies</a>
+            <a href="#resources" class="nav-item">Key Resources</a>
+        </div>
+    </div>
+
+    <div class="section" id="federal-civilian">
+        <h2>Federal Civilian Agencies</h2>
+        
+        <h3>National Science Foundation (NSF)</h3>
+        <div class="alert">
+            <strong>Current Status (May 2025):</strong> NSF funding is currently frozen. New awards halted, 15% indirect cost cap implemented, significant budget cuts proposed. Monitor <a href="https://www.nsf.gov/executive-orders" target="_blank">nsf.gov/executive-orders</a> for updates.
+        </div>
+        
+        <div class="subsection">
+            <h4>Key NSF Programs for Sociotechnical Research</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Directorate/Division</th>
+                        <th>Funding Range</th>
+                        <th>Duration</th>
+                        <th>Approach</th>
+                        <th>Key Requirements</th>
+                        <th>Program Officer Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SaTC (Secure and Trustworthy Cyberspace)</strong></td>
+                        <td>CISE/CNS</td>
+                        <td>$50K-$500K/year</td>
+                        <td>1-3 years</td>
+                        <td><span class="approach-tag open-call">Open Call</span></td>
+                        <td>• Sociotechnical security<br>• Human factors emphasis</td>
+                        <td>Multiple POs, rotating panels</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smart and Connected Communities</strong></td>
+                        <td>CISE/CNS</td>
+                        <td>$150K-$2.5M</td>
+                        <td>2-4 years</td>
+                        <td><span class="approach-tag open-call">Open Call</span></td>
+                        <td>• Community partnerships required<br>• Pilot deployment</td>
+                        <td>Contact PO before submission</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ethical and Responsible Research (ER2)</strong></td>
+                        <td>SBE</td>
+                        <td>$25K-$400K</td>
+                        <td>1-3 years</td>
+                        <td><span class="approach-tag open-call">Open Call</span></td>
+                        <td>• Ethics of emerging tech<br>• Responsible innovation</td>
+                        <td>Cross-directorate program</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Human-Centered Computing</strong></td>
+                        <td>CISE/IIS</td>
+                        <td>$100K-$500K</td>
+                        <td>2-3 years</td>
+                        <td><span class="approach-tag rolling">Rolling</span></td>
+                        <td>• HCI, CSCW, social computing</td>
+                        <td>Core program, multiple POs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Science of Science</strong></td>
+                        <td>SBE/SES</td>
+                        <td>$50K-$300K</td>
+                        <td>1-3 years</td>
+                        <td><span class="approach-tag open-call">Open Call</span></td>
+                        <td>• Science policy<br>• Innovation studies</td>
+                        <td>Joint with NCSES</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>NSF Review Process:</strong> Uses rotating panels of experts, program officers make funding recommendations but don't sit on panels. <a href="https://www.nsf.gov/bfa/dias/policy/merit_review/" target="_blank">Learn more about NSF merit review</a></p>
+        </div>
+        
+        <h3>National Institutes of Health (NIH)</h3>
+        <div class="subsection">
+            <h4>NIH Institutes Relevant to Sociotechnical Health Research</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institute/Center</th>
+                        <th>Focus Areas</th>
+                        <th>Common Mechanisms</th>
+                        <th>Special Programs</th>
+                        <th>Review Process</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>NIMH</strong><br>National Institute of Mental Health</td>
+                        <td>• Digital mental health<br>• Social media impacts<br>• mHealth interventions</td>
+                        <td>R01, R21, R34</td>
+                        <td>• BRAIN Initiative<br>• Suicide prevention tech</td>
+                        <td>Standing study sections</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NLM</strong><br>National Library of Medicine</td>
+                        <td>• Health informatics<br>• Data science<br>• Consumer health tech</td>
+                        <td>R01, R43/44</td>
+                        <td>• Biomedical informatics<br>• AI/ML in healthcare</td>
+                        <td>Special emphasis panels</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NIBIB</strong><br>Biomedical Imaging & Bioengineering</td>
+                        <td>• Point-of-care tech<br>• mHealth platforms<br>• Telehealth systems</td>
+                        <td>R01, U01, P41</td>
+                        <td>• POCTRN network<br>• RADx Tech</td>
+                        <td>Mixed panels</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBSSR</strong><br>Office of Behavioral & Social Sciences</td>
+                        <td>• Behavior change tech<br>• Social determinants<br>• Community health</td>
+                        <td>Supplements, RFAs</td>
+                        <td>• mHealth training<br>• Systems science</td>
+                        <td>Trans-NIH initiatives</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>NIH Review Process:</strong> Uses standing study sections with consistent membership, plus special emphasis panels. <a href="https://grants.nih.gov/grants/peer-review.htm" target="_blank">NIH Peer Review overview</a></p>
+        </div>
+
+        <h3>Other Federal Civilian Agencies</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Agency</th>
+                    <th>Relevant Programs</th>
+                    <th>Funding Range</th>
+                    <th>Approach</th>
+                    <th>Special Features</th>
+                    <th>Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CDC</strong><br>Centers for Disease Control</td>
+                    <td>• Public health informatics<br>• Community interventions<br>• Health equity tech</td>
+                    <td>$100K-$1M/year</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• State partnerships<br>• Implementation focus</td>
+                    <td><a href="https://www.cdc.gov/grants/" target="_blank">CDC Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Department of Energy</strong></td>
+                    <td>• Smart grid social adoption<br>• Energy behavior<br>• Community resilience</td>
+                    <td>$250K-$2M/year</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• National lab access<br>• ARPA-E for high-risk</td>
+                    <td><a href="https://www.energy.gov/eere/funding/eere-funding-opportunities" target="_blank">DOE EERE</a></td>
+                </tr>
+                <tr>
+                    <td><strong>USDA</strong><br>Dept of Agriculture</td>
+                    <td>• Rural broadband adoption<br>• Precision ag interfaces<br>• Food security tech</td>
+                    <td>$50K-$500K</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Land-grant partnerships<br>• Extension integration</td>
+                    <td><a href="https://www.nifa.usda.gov/grants" target="_blank">NIFA Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>DHS</strong><br>Homeland Security</td>
+                    <td>• Cybersecurity awareness<br>• Crisis informatics<br>• Community resilience</td>
+                    <td>$100K-$750K</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>• Centers of Excellence<br>• HSARPA innovation</td>
+                    <td><a href="https://www.dhs.gov/science-and-technology/centers-excellence" target="_blank">DHS S&T</a></td>
+                </tr>
+                <tr>
+                    <td><strong>FDA</strong><br>Food & Drug Admin</td>
+                    <td>• Digital health regulation<br>• Patient engagement<br>• Real-world evidence</td>
+                    <td>$100K-$500K</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Regulatory science<br>• Industry partnerships</td>
+                    <td><a href="https://www.fda.gov/science-research/advancing-regulatory-science/regulatory-science-extramural-research" target="_blank">FDA Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Department of Education</strong></td>
+                    <td>• EdTech effectiveness<br>• Digital divide<br>• Learning analytics ethics</td>
+                    <td>$100K-$2M</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• IES research grants<br>• i3 innovation</td>
+                    <td><a href="https://ies.ed.gov/funding/" target="_blank">IES Funding</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section" id="federal-defense">
+        <h2>Defense & Intelligence Agencies</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Agency/Office</th>
+                    <th>Focus Areas</th>
+                    <th>Funding Vehicles</th>
+                    <th>Typical Range</th>
+                    <th>Approach</th>
+                    <th>Key Considerations</th>
+                    <th>Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>DARPA</strong><br>Defense Advanced Research Projects</td>
+                    <td>• Social media analysis<br>• Human-AI teaming<br>• Influence operations</td>
+                    <td>• BAAs<br>• Special programs<br>• Seedlings</td>
+                    <td>$500K-$5M/year</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>• PM relationships key<br>• High-risk tolerance<br>• Rapid prototypes</td>
+                    <td><a href="https://www.darpa.mil/work-with-us/opportunities" target="_blank">DARPA Opportunities</a></td>
+                </tr>
+                <tr>
+                    <td><strong>IARPA</strong><br>Intelligence Advanced Research</td>
+                    <td>• Forecasting<br>• Social dynamics<br>• Hybrid threats</td>
+                    <td>• BAAs<br>• Prize challenges<br>• Seedlings</td>
+                    <td>$200K-$2M/year</td>
+                    <td><span class="approach-tag invitation">Invitation</span></td>
+                    <td>• Clearance helpful<br>• Novel approaches<br>• Metrics-driven</td>
+                    <td><a href="https://www.iarpa.gov/research-programs" target="_blank">IARPA Programs</a></td>
+                </tr>
+                <tr>
+                    <td><strong>ONR</strong><br>Office of Naval Research</td>
+                    <td>• Human factors<br>• Team performance<br>• Trust in autonomy</td>
+                    <td>• BAAs<br>• YIP (Young Inv.)<br>• DURIP equipment</td>
+                    <td>$150K-$500K/year</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Basic & applied<br>• University partnerships<br>• International OK</td>
+                    <td><a href="https://www.onr.navy.mil/en/work-with-us/funding-opportunities" target="_blank">ONR Funding</a></td>
+                </tr>
+                <tr>
+                    <td><strong>AFOSR</strong><br>Air Force Office of Sci Research</td>
+                    <td>• Trust & influence<br>• Computational cognition<br>• Info operations</td>
+                    <td>• Core programs<br>• MURI<br>• YIP</td>
+                    <td>$150K-$250K/year</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Basic research<br>• International collab<br>• White papers first</td>
+                    <td><a href="https://www.afrl.af.mil/AFOSR/" target="_blank">AFOSR</a></td>
+                </tr>
+                <tr>
+                    <td><strong>ARO</strong><br>Army Research Office</td>
+                    <td>• Network science<br>• Social dynamics<br>• Human-agent teaming</td>
+                    <td>• Core BAA<br>• STIR<br>• MURI</td>
+                    <td>$150K-$300K/year</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Basic research<br>• PM pre-contact<br>• Conference support</td>
+                    <td><a href="https://www.arl.army.mil/aro/" target="_blank">ARO</a></td>
+                </tr>
+                <tr>
+                    <td><strong>AFRL</strong><br>Air Force Research Lab</td>
+                    <td>• Human performance<br>• Decision support<br>• Training systems</td>
+                    <td>• BAAs<br>• SBIR/STTR<br>• Coop agreements</td>
+                    <td>$100K-$1M</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>• Applied focus<br>• Transition paths<br>• Lab partnerships</td>
+                    <td><a href="https://www.afrl.af.mil/" target="_blank">AFRL</a></td>
+                </tr>
+                <tr>
+                    <td><strong>OSD</strong><br>Office of Secretary of Defense</td>
+                    <td>• Innovation adoption<br>• Acquisition reform<br>• Strategic competition</td>
+                    <td>• Minerva<br>• Special topics</td>
+                    <td>$100K-$1.5M</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Policy relevance<br>• Social science focus</td>
+                    <td><a href="https://minerva.defense.gov/" target="_blank">Minerva</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section" id="federal-special">
+        <h2>Special Federal Programs & Vehicles</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Program Type</th>
+                    <th>Description</th>
+                    <th>Eligibility</th>
+                    <th>Funding Range</th>
+                    <th>Key Features</th>
+                    <th>Application Tips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SBIR</strong><br>Small Business Innovation Research</td>
+                    <td>Commercialization-focused R&D</td>
+                    <td>Small businesses<br>(<500 employees)</td>
+                    <td>Phase I: $50-275K<br>Phase II: $750K-1.8M</td>
+                    <td>• 3.2% federal R&D setaside<br>• All major agencies<br>• Retain IP rights</td>
+                    <td>• Partner with universities<br>• <a href="https://www.sbir.gov/" target="_blank">SBIR.gov</a></td>
+                </tr>
+                <tr>
+                    <td><strong>STTR</strong><br>Small Business Tech Transfer</td>
+                    <td>University-small business partnerships</td>
+                    <td>SB + research institution</td>
+                    <td>Phase I: $50-275K<br>Phase II: $750K-1.8M</td>
+                    <td>• Requires university partner<br>• 0.45% setaside<br>• Technology transfer</td>
+                    <td>• Define IP split early<br>• Clear work division</td>
+                </tr>
+                <tr>
+                    <td><strong>BAA</strong><br>Broad Agency Announcement</td>
+                    <td>Open-ended research calls</td>
+                    <td>All entity types</td>
+                    <td>Varies widely</td>
+                    <td>• Flexible topics<br>• White papers often<br>• Multiple awards</td>
+                    <td>• Contact PM first<br>• Read amendments</td>
+                </tr>
+                <tr>
+                    <td><strong>Cooperative Agreements</strong></td>
+                    <td>Substantial agency involvement</td>
+                    <td>Usually nonprofits, universities</td>
+                    <td>$100K-$10M+</td>
+                    <td>• Shared governance<br>• Agency partnership<br>• Multi-year typical</td>
+                    <td>• Relationship crucial<br>• Plan governance</td>
+                </tr>
+                <tr>
+                    <td><strong>OTA</strong><br>Other Transaction Authority</td>
+                    <td>Flexible R&D agreements</td>
+                    <td>Non-traditional contractors</td>
+                    <td>$500K-$100M+</td>
+                    <td>• Bypasses FAR<br>• Rapid execution<br>• IP flexibility</td>
+                    <td>• DoD emphasis<br>• Consortia access</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section" id="foundations">
+        <h2>Major Foundation Funding</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Foundation</th>
+                    <th>Relevant Programs</th>
+                    <th>Typical Grants</th>
+                    <th>Approach</th>
+                    <th>Program Officers/Areas</th>
+                    <th>Application Process</th>
+                    <th>Links</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Alfred P. Sloan Foundation</strong></td>
+                    <td>• Public Understanding of Tech<br>• Data & Society<br>• Digital Infrastructure</td>
+                    <td>$50K-$2M</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>• Joshua Greenberg (Digital Infra)<br>• Doron Weber (Public Understanding)<br>• Program-specific POs</td>
+                    <td>• LOI → Invitation<br>• PO consultation key</td>
+                    <td><a href="https://sloan.org/programs" target="_blank">Sloan Programs</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Bill & Melinda Gates Foundation</strong></td>
+                    <td>• Digital Financial Services<br>• Data for Development<br>• Global Health Tech</td>
+                    <td>$100K-$10M+</td>
+                    <td><span class="approach-tag invitation">Invitation</span></td>
+                    <td>• Strategy-specific teams<br>• Regional offices</td>
+                    <td>• Grand Challenges<br>• By invitation mostly</td>
+                    <td><a href="https://www.gatesfoundation.org/about/how-we-work/grants" target="_blank">Gates Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>William and Flora Hewlett Foundation</strong></td>
+                    <td>• Cyber Initiative<br>• Democracy Program<br>• Open Educational Resources</td>
+                    <td>$50K-$1M</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>Program-specific directors</td>
+                    <td>• LOI process<br>• Strategy alignment critical</td>
+                    <td><a href="https://hewlett.org/programs/" target="_blank">Hewlett Programs</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Charles Stewart Mott Foundation</strong></td>
+                    <td>• Civil Society<br>• Democratic Practice<br>• Community Systems</td>
+                    <td>$50K-$500K</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>Geographic & thematic POs</td>
+                    <td>• LOI → Full proposal<br>• Place-based emphasis</td>
+                    <td><a href="https://www.mott.org/work/" target="_blank">Mott Work</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Ford Foundation</strong></td>
+                    <td>• Technology & Society<br>• Internet Freedom<br>• Civic Engagement Tech</td>
+                    <td>$100K-$1M</td>
+                    <td><span class="approach-tag invitation">Invitation</span></td>
+                    <td>Regional & thematic teams</td>
+                    <td>• BUILD grants<br>• Strategy alignment</td>
+                    <td><a href="https://www.fordfoundation.org/work/our-grants/" target="_blank">Ford Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>MacArthur Foundation</strong></td>
+                    <td>• Technology & Human Rights<br>• Criminal Justice Tech<br>• Nuclear Challenges</td>
+                    <td>$150K-$3M</td>
+                    <td><span class="approach-tag invitation">Invitation</span></td>
+                    <td>Initiative-specific directors</td>
+                    <td>• Big Bets approach<br>• 100&Change competition</td>
+                    <td><a href="https://www.macfound.org/programs/" target="_blank">MacArthur Programs</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Andrew W. Mellon Foundation</strong></td>
+                    <td>• Digital Humanities<br>• Scholarly Communications<br>• Arts & Culture Tech</td>
+                    <td>$50K-$2M</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>Program directors by area</td>
+                    <td>• Inquiry form<br>• University partnerships</td>
+                    <td><a href="https://mellon.org/programs/" target="_blank">Mellon Programs</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Knight Foundation</strong></td>
+                    <td>• Media Innovation<br>• Smart Cities<br>• Informed Communities</td>
+                    <td>$50K-$1M</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Media & community POs</td>
+                    <td>• Knight News Challenge<br>• Prototype Fund</td>
+                    <td><a href="https://knightfoundation.org/challenges/" target="_blank">Knight Challenges</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Robert Wood Johnson Foundation</strong></td>
+                    <td>• Digital Health Equity<br>• Data for Health<br>• Community Well-being Tech</td>
+                    <td>$100K-$500K</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Theme-based teams</td>
+                    <td>• Evidence for Action<br>• Pioneering Ideas</td>
+                    <td><a href="https://www.rwjf.org/en/grants.html" target="_blank">RWJF Grants</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Russell Sage Foundation</strong></td>
+                    <td>• Future of Work<br>• Social Inequality<br>• Behavioral Economics</td>
+                    <td>$35K-$175K</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Single program officer model</td>
+                    <td>• Letter of inquiry<br>• 2 cycles/year</td>
+                    <td><a href="https://www.russellsage.org/how-to-apply" target="_blank">RSF Apply</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Omidyar Network</strong></td>
+                    <td>• Beneficial Tech<br>• Digital Identity<br>• Platform Accountability</td>
+                    <td>$100K-$1M+</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>Initiative leads</td>
+                    <td>• Impact investing blend<br>• Systems change focus</td>
+                    <td><a href="https://omidyar.com/" target="_blank">Omidyar</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Mozilla Foundation</strong></td>
+                    <td>• Internet Health<br>• Trustworthy AI<br>• Data Stewardship</td>
+                    <td>$10K-$250K</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Program managers</td>
+                    <td>• Fellows program<br>• Awards track</td>
+                    <td><a href="https://foundation.mozilla.org/en/what-we-fund/" target="_blank">Mozilla Funding</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section" id="tech-industry">
+        <h2>Technology Industry Research Programs</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Programs</th>
+                    <th>Focus Areas</th>
+                    <th>Funding/Support</th>
+                    <th>Approach</th>
+                    <th>Timeline</th>
+                    <th>Links & Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Google</strong></td>
+                    <td>• Research Awards<br>• PhD Fellowships<br>• Faculty Awards<br>• exploreCSR</td>
+                    <td>• AI for Social Good<br>• Privacy & Security<br>• HCI & Visualization<br>• Computational Social Science</td>
+                    <td>• Awards: $50-150K<br>• Fellows: $100K<br>• Cloud credits<br>• Dataset access</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Annual cycles<br>• Fall deadlines typical</td>
+                    <td><a href="https://research.google/outreach/" target="_blank">Google Research</a><br>Unrestricted funds</td>
+                </tr>
+                <tr>
+                    <td><strong>Microsoft</strong></td>
+                    <td>• Azure Research Credits<br>• AI for Good grants<br>• AETHER grants<br>• Ada Lovelace Fellowship</td>
+                    <td>• AI Ethics<br>• Accessibility<br>• Sustainability<br>• Future of Work</td>
+                    <td>• $50-200K + Azure<br>• Fellowships: $42K/yr<br>• Compute resources</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Rolling & cycles<br>• Program-specific</td>
+                    <td><a href="https://www.microsoft.com/en-us/research/academic-programs/" target="_blank">MSR Academic</a><br>IP flexible</td>
+                </tr>
+                <tr>
+                    <td><strong>Meta (Facebook)</strong></td>
+                    <td>• Research Awards<br>• Fellowship Program<br>• Ethics in AI<br>• PyTorch grants</td>
+                    <td>• Social Technologies<br>• Privacy-preserving tech<br>• AR/VR society<br>• Integrity systems</td>
+                    <td>• Awards: $50-100K<br>• Fellows: $42K/yr<br>• Data partnerships</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• 1-2 cycles/year<br>• RFP-based</td>
+                    <td><a href="https://research.facebook.com/programs/" target="_blank">Meta Research</a><br>Open science model</td>
+                </tr>
+                <tr>
+                    <td><strong>Amazon</strong></td>
+                    <td>• Amazon Research Awards<br>• AWS Cloud Credits<br>• Alexa Fund<br>• Amazon Scholars</td>
+                    <td>• Fairness in AI<br>• Robotics HRI<br>• Sustainability<br>• Economics & computation</td>
+                    <td>• Awards: $20-100K<br>• AWS credits: $20K+<br>• Equipment loans</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>• Annual cycle<br>• Fall deadline</td>
+                    <td><a href="https://www.amazon.science/research-awards" target="_blank">Amazon Science</a><br>Can't be sole funder</td>
+                </tr>
+                <tr>
+                    <td><strong>IBM</strong></td>
+                    <td>• PhD Fellowship<br>• Faculty Awards<br>• Shared University Research<br>• AI Horizons</td>
+                    <td>• AI Ethics<br>• Quantum computing<br>• Hybrid cloud<br>• Security</td>
+                    <td>• Awards: $50-150K<br>• Equipment access<br>• Collaboration</td>
+                    <td><span class="approach-tag network">Network</span></td>
+                    <td>• Relationship-based<br>• Some open calls</td>
+                    <td><a href="https://research.ibm.com/university" target="_blank">IBM University</a><br>IP negotiable</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple</strong></td>
+                    <td>• Apple Scholars<br>• ML Research</td>
+                    <td>• Privacy tech<br>• ML fairness<br>• Health sensing</td>
+                    <td>• PhD support<br>• Mentorship focus</td>
+                    <td><span class="approach-tag invitation">Invitation</span></td>
+                    <td>Limited programs</td>
+                    <td><a href="https://machinelearning.apple.com/" target="_blank">Apple ML</a><br>Very selective</td>
+                </tr>
+                <tr>
+                    <td><strong>Adobe</strong></td>
+                    <td>• Research Grants<br>• PhD Fellowship<br>• Faculty Awards</td>
+                    <td>• Creative AI<br>• Document intelligence<br>• HCI for creativity</td>
+                    <td>• Awards: $50K<br>• Software access</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Annual programs</td>
+                    <td><a href="https://research.adobe.com/careers/grants-and-fellowships/" target="_blank">Adobe Research</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Nvidia</strong></td>
+                    <td>• Academic Grants<br>• GPU Grant Program<br>• Fellowship</td>
+                    <td>• AI infrastructure<br>• Applied AI<br>• Graphics & society</td>
+                    <td>• Hardware grants<br>• Cash awards rare</td>
+                    <td><span class="approach-tag open-call">Open Call</span></td>
+                    <td>Rolling basis</td>
+                    <td><a href="https://developer.nvidia.com/academic-programs" target="_blank">Nvidia Academic</a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="tips-box">
+            <h4>Tech Industry Funding Tips:</h4>
+            <ul>
+                <li>Most programs prefer you're not 100% industry-funded - diversify sources</li>
+                <li>Build relationships through internships, visiting researcher programs first</li>
+                <li>Understand each company's publication policies and IP stance</li>
+                <li>Leverage equipment/credits even if cash funding is limited</li>
+                <li>Consider their "AI for Good" or social impact initiatives for sociotechnical work</li>
+                <li>Many have specific diversity & inclusion funding tracks</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="other-industry">
+        <h2>Other Industry & Corporate Partnerships</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Sector/Company</th>
+                    <th>Research Interests</th>
+                    <th>Partnership Models</th>
+                    <th>Typical Support</th>
+                    <th>Approach Needed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Telecommunications</strong><br>(Verizon, AT&T, T-Mobile)</td>
+                    <td>• 5G applications<br>• Smart cities<br>• Digital equity</td>
+                    <td>• Innovation labs<br>• Sponsored research<br>• Testbeds</td>
+                    <td>$50K-$500K + infrastructure</td>
+                    <td><span class="approach-tag network">Network</span> through university relations</td>
+                </tr>
+                <tr>
+                    <td><strong>Financial Services</strong><br>(JPMorgan, Mastercard, Visa)</td>
+                    <td>• FinTech adoption<br>• Financial inclusion<br>• Fraud & trust</td>
+                    <td>• Research centers<br>• PhD programs<br>• Challenges</td>
+                    <td>$100K-$1M</td>
+                    <td><span class="approach-tag network">Network</span> or RFPs</td>
+                </tr>
+                <tr>
+                    <td><strong>Healthcare/Pharma</strong><br>(J&J, Pfizer, Roche)</td>
+                    <td>• Digital therapeutics<br>• Patient engagement<br>• Real-world evidence</td>
+                    <td>• Investigator grants<br>• Innovation centers<br>• Data partnerships</td>
+                    <td>$50K-$500K</td>
+                    <td><span class="approach-tag open-call">Open Call</span> for some</td>
+                </tr>
+                <tr>
+                    <td><strong>Automotive</strong><br>(Ford, GM, Toyota)</td>
+                    <td>• Mobility systems<br>• Human-autonomy interaction<br>• Smart infrastructure</td>
+                    <td>• University alliances<br>• Open innovation<br>• Challenges</td>
+                    <td>$100K-$2M</td>
+                    <td><span class="approach-tag network">Network</span> relationships</td>
+                </tr>
+                <tr>
+                    <td><strong>Retail/Consumer</strong><br>(Walmart, P&G, Target)</td>
+                    <td>• Consumer behavior<br>• Supply chain tech<br>• Sustainability</td>
+                    <td>• Innovation partnerships<br>• Store labs<br>• Data access</td>
+                    <td>$50K-$250K</td>
+                    <td><span class="approach-tag invitation">Invitation</span> typical</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section" id="international">
+        <h2>International Funding Opportunities</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Funder/Program</th>
+                    <th>Eligibility</th>
+                    <th>Focus Areas</th>
+                    <th>Funding Range</th>
+                    <th>Key Requirements</th>
+                    <th>Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>European Research Council (ERC)</strong></td>
+                    <td>US researchers with EU host</td>
+                    <td>• All fields<br>• Excellence-based<br>• Frontier research</td>
+                    <td>€1.5-2.5M</td>
+                    <td>• EU host institution<br>• 50%+ time in Europe</td>
+                    <td><a href="https://erc.europa.eu/" target="_blank">ERC</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Horizon Europe</strong></td>
+                    <td>US partners in consortia</td>
+                    <td>• Digital transformation<br>• Green transition<br>• Social innovation</td>
+                    <td>€2-10M (total)</td>
+                    <td>• Multi-country consortia<br>• Self-funded US partners</td>
+                    <td><a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank">Funding Portal</a></td>
+                </tr>
+                <tr>
+                    <td><strong>UKRI (UK Research & Innovation)</strong></td>
+                    <td>US-UK partnerships</td>
+                    <td>• AI & data<br>• Future leaders<br>• Global challenges</td>
+                    <td>£500K-5M</td>
+                    <td>• UK lead usually<br>• Match funding</td>
+                    <td><a href="https://www.ukri.org/opportunity/" target="_blank">UKRI</a></td>
+                </tr>
+                <tr>
+                    <td><strong>DFG (German Research Foundation)</strong></td>
+                    <td>US-German collaboration</td>
+                    <td>• All disciplines<br>• Excellence clusters</td>
+                    <td>€200K-2M</td>
+                    <td>• German partner<br>• Joint proposals</td>
+                    <td><a href="https://www.dfg.de/en/" target="_blank">DFG</a></td>
+                </tr>
+                <tr>
+                    <td><strong>JSPS (Japan)</strong></td>
+                    <td>US-Japan partnerships</td>
+                    <td>• Science diplomacy<br>• Aging society<br>• Disaster resilience</td>
+                    <td>¥10-50M</td>
+                    <td>• Japanese collaborator<br>• Exchange component</td>
+                    <td><a href="https://www.jsps.go.jp/english/" target="_blank">JSPS</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Wellcome Trust</strong></td>
+                    <td>Global, health focus</td>
+                    <td>• Digital health<br>• Global health equity<br>• Science & society</td>
+                    <td>£100K-5M</td>
+                    <td>• Health relevance<br>• LMIC partnerships valued</td>
+                    <td><a href="https://wellcome.org/what-we-do/our-work" target="_blank">Wellcome</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Volkswagen Foundation</strong></td>
+                    <td>International teams</td>
+                    <td>• AI & society<br>• Global challenges<br>• Knowledge transfer</td>
+                    <td>€100K-1.5M</td>
+                    <td>• Interdisciplinary<br>• Young researchers</td>
+                    <td><a href="https://www.volkswagenstiftung.de/en" target="_blank">VW Foundation</a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="info-box">
+            <strong>International Partnership Tips:</strong>
+            <ul>
+                <li>Start with researcher-to-researcher connections, then build to institutional partnerships</li>
+                <li>Understand each country's indirect cost policies (often much lower than US)</li>
+                <li>Plan for visa/work permit requirements early</li>
+                <li>Consider time zone challenges for collaboration</li>
+                <li>Many US universities have seed funds for international collaboration</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="state-local">
+        <h2>State & Local Government Funding</h2>
+        
+        <div class="subsection">
+            <h4>Common State-Level Sources</h4>
+            <ul>
+                <li><strong>State Science & Technology Initiatives:</strong> Many states have innovation funds
+                    <ul>
+                        <li>Examples: NYSTAR (New York), Mass Tech Collaborative, California Institute for Regenerative Medicine</li>
+                        <li>Typically $25K-$500K for research projects</li>
+                        <li>Often require in-state economic impact</li>
+                    </ul>
+                </li>
+                <li><strong>Departments of Education:</strong> 
+                    <ul>
+                        <li>K-12 technology integration research</li>
+                        <li>Teacher professional development tech</li>
+                        <li>Digital equity initiatives</li>
+                        <li>Usually $50K-$250K</li>
+                    </ul>
+                </li>
+                <li><strong>Departments of Health/Human Services:</strong>
+                    <ul>
+                        <li>Medicaid innovation (state-administered)</li>
+                        <li>Public health technology pilots</li>
+                        <li>Behavioral health tech initiatives</li>
+                        <li>Range: $100K-$1M</li>
+                    </ul>
+                </li>
+                <li><strong>Economic Development Agencies:</strong>
+                    <ul>
+                        <li>Innovation vouchers for SME partnerships</li>
+                        <li>Cluster development grants</li>
+                        <li>Workforce development tech</li>
+                    </ul>
+                </li>
+                <li><strong>Transportation Departments:</strong>
+                    <ul>
+                        <li>Smart city pilots</li>
+                        <li>Connected vehicle research</li>
+                        <li>Equity in mobility studies</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p><strong>Finding State Opportunities:</strong> Check state government websites, subscribe to economic development newsletters, connect with state university system offices</p>
+        </div>
+    </div>
+
+    <div class="section" id="search-strategies">
+        <h2>Strategic Search Approaches</h2>
+        
+        <div class="subsection">
+            <h4>1. Comprehensive Search Strategy</h4>
+            <ol>
+                <li><strong>Start Broad:</strong>
+                    <ul>
+                        <li>Grants.gov for all federal opportunities</li>
+                        <li>Foundation Directory Online for private foundations</li>
+                        <li>Pivot or GrantForward for aggregated searches</li>
+                    </ul>
+                </li>
+                <li><strong>Set Up Alerts:</strong>
+                    <ul>
+                        <li>Keyword alerts: "sociotechnical," "human-computer," "digital society," etc.</li>
+                        <li>Agency-specific RSS feeds</li>
+                        <li>Foundation newsletter subscriptions</li>
+                    </ul>
+                </li>
+                <li><strong>Network Intelligence:</strong>
+                    <ul>
+                        <li>Join professional associations (ACM, IEEE, AAAI)</li>
+                        <li>Attend program officer webinars</li>
+                        <li>Follow funded PIs on social media</li>
+                    </ul>
+                </li>
+                <li><strong>Reverse Engineering:</strong>
+                    <ul>
+                        <li>Look at CVs of successful researchers in your area</li>
+                        <li>Use NIH Reporter, NSF Award Search to find similar projects</li>
+                        <li>Read acknowledgments in papers you admire</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="subsection">
+            <h4>2. Building Funder Intelligence</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Information to Track</th>
+                        <th>Where to Find It</th>
+                        <th>Why It Matters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Program Officer Interests</td>
+                        <td>• Webinars<br>• Conference talks<br>• Dear Colleague Letters</td>
+                        <td>Align proposals with current priorities</td>
+                    </tr>
+                    <tr>
+                        <td>Funding History</td>
+                        <td>• Award databases<br>• Annual reports<br>• 990 forms (foundations)</td>
+                        <td>Understand typical award sizes, success rates</td>
+                    </tr>
+                    <tr>
+                        <td>Review Panel Composition</td>
+                        <td>• Public panel rosters<br>• Colleague networks</td>
+                        <td>Frame proposals for likely reviewers</td>
+                    </tr>
+                    <tr>
+                        <td>Strategic Plans</td>
+                        <td>• Agency websites<br>• Congressional testimony<br>• Foundation strategy docs</td>
+                        <td>Anticipate future opportunities</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="subsection">
+            <h4>3. Creating Your Funding Map</h4>
+            <ol>
+                <li><strong>Identify Your Themes:</strong> What 3-5 keywords best describe your work?</li>
+                <li><strong>Map to Funders:</strong> Which agencies/foundations care about these themes?</li>
+                <li><strong>Understand Timelines:</strong> When are their deadlines? How long are review cycles?</li>
+                <li><strong>Build Relationships:</strong> Who are the program officers? Who has been funded?</li>
+                <li><strong>Plan Your Pipeline:</strong> Stagger submissions across multiple funders</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section" id="resources">
+        <h2>Essential Resources & Tools</h2>
+        
+        <div class="resource-box">
+            <h3>Primary Databases</h3>
+            <ul>
+                <li><strong><a href="https://www.grants.gov/" target="_blank">Grants.gov</a>:</strong> Comprehensive federal grant portal - set up saved searches and email alerts</li>
+                <li><strong><a href="https://pivot.proquest.com/" target="_blank">Pivot</a>:</strong> Global funding database (subscription) - includes federal, foundation, and international</li>
+                <li><strong><a href="https://www.grantforward.com/" target="_blank">GrantForward</a>:</strong> Alternative to Pivot with good search capabilities</li>
+                <li><strong><a href="https://fconline.foundationcenter.org/" target="_blank">Foundation Directory Online</a>:</strong> Best for private foundation research (subscription)</li>
+                <li><strong><a href="https://www.instrumentl.com/" target="_blank">Instrumentl</a>:</strong> AI-powered grant matching (subscription)</li>
+            </ul>
+            
+            <h3>Federal Agency Tools</h3>
+            <ul>
+                <li><strong><a href="https://reporter.nih.gov/" target="_blank">NIH RePORTER</a>:</strong> Search all NIH-funded projects, see funding trends</li>
+                <li><strong><a href="https://www.nsf.gov/awardsearch/" target="_blank">NSF Award Search</a>:</strong> All NSF awards with abstracts and outcomes</li>
+                <li><strong><a href="https://www.sbir.gov/" target="_blank">SBIR.gov</a>:</strong> Central site for all SBIR/STTR opportunities</li>
+                <li><strong><a href="https://beta.sam.gov/" target="_blank">SAM.gov</a>:</strong> System for Award Management - required for federal grants</li>
+            </ul>
+            
+            <h3>News & Intelligence</h3>
+            <ul>
+                <li><strong><a href="https://www.science.org/content/page/scienceinsider" target="_blank">Science Insider</a>:</strong> Policy news affecting research funding</li>
+                <li><strong><a href="https://www.chronicle.com/section/money" target="_blank">Chronicle of Higher Education - Money</a>:</strong> Academic funding news</li>
+                <li><strong><a href="https://philanthropynewsdigest.org/" target="_blank">Philanthropy News Digest</a>:</strong> Foundation RFPs and news</li>
+                <li><strong><a href="https://www.insidephilanthropy.com/" target="_blank">Inside Philanthropy</a>:</strong> Deep dives on foundation strategies</li>
+            </ul>
+            
+            <h3>Professional Networks</h3>
+            <ul>
+                <li><strong><a href="https://sociotech.net/" target="_blank">CSST (sociotech.net)</a>:</strong> Sociotechnical systems research community</li>
+                <li><strong><a href="https://www.ncura.edu/" target="_blank">NCURA</a>:</strong> National Council of University Research Administrators</li>
+                <li><strong><a href="https://www.sra-international.org/" target="_blank">Society of Research Administrators</a>:</strong> Professional development and networking</li>
+                <li><strong><a href="https://www.nordp.org/" target="_blank">NORDP</a>:</strong> National Organization of Research Development Professionals</li>
+            </ul>
+            
+            <h3>Grant Writing Resources</h3>
+            <ul>
+                <li><strong><a href="https://www.theprofessorisin.com/" target="_blank">The Professor Is In</a>:</strong> Grant writing advice and samples</li>
+                <li><strong><a href="https://www.nisenet.org/catalog/guide-successful-proposal-writing" target="_blank">NISE Net Proposal Writing Guide</a>:</strong> Excellent free guide</li>
+                <li><strong>University Resources:</strong> Most universities have grant writing workshops and support</li>
+                <li><strong>Successful Proposals:</strong> Many PIs share funded proposals - search "[PI name] funded proposal"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Final Recommendations for Success</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">18-24</div>
+                <div class="timeline-label">Months Before: Relationship Building</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">12</div>
+                <div class="timeline-label">Months: Identify Opportunities</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">6</div>
+                <div class="timeline-label">Months: Draft & Get Feedback</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">3</div>
+                <div class="timeline-label">Months: Finalize Team & Budget</div>

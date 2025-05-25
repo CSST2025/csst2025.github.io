@@ -1,0 +1,1064 @@
+---
+layout: none
+permalink: /tools/impact-planning/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Research Impact Journey</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .progress-bar {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .progress-track {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: var(--success);
+            height: 100%;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stage-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .stage-container.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stage-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stage-description {
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .question {
+            margin-bottom: 2.5rem;
+        }
+
+        .question-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .option-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .option {
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .option:hover {
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .option.selected {
+            border-color: var(--secondary);
+            background: #e8f4f8;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .option-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .slider-container {
+            margin: 1rem 0;
+        }
+
+        .slider {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: #e0e0e0;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary);
+            cursor: pointer;
+            border: none;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: #ccc;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .results-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .results-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .profile-summary {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .profile-item {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-label {
+            font-weight: 600;
+            min-width: 150px;
+            color: var(--primary);
+        }
+
+        .recommendation {
+            border-left: 4px solid var(--success);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .recommendation-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pathway-list {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .pathway-item {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pathway-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .explore-btn {
+            background: var(--success);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .explore-btn:hover {
+            background: #229a4c;
+            transform: translateY(-2px);
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .multichoice-note {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .stage-container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Design Your Research Impact Journey</h1>
+            <p class="subtitle">A guided tool for planning meaningful research impact</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress-label">
+                <span id="progressText">Stage 1 of 3: Impact Vision & Values</span>
+                <span id="progressPercent">33%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill" style="width: 33%"></div>
+            </div>
+        </div>
+
+        <!-- Stage 1: Impact Vision & Values -->
+        <div class="stage-container active" id="stage1">
+            <h2 class="stage-title">Impact Vision & Values</h2>
+            <p class="stage-description">Let's start by understanding what drives you and what kind of impact you envision.</p>
+
+            <div class="question" data-question="constituency">
+                <h3 class="question-title">Who do you want to help?</h3>
+                <div class="option-grid">
+                    <div class="option" data-value="broad">
+                        <div class="option-title">Broad Impact</div>
+                        <div class="option-description">I want to contribute to general knowledge that could benefit humanity broadly. I'm less concerned about specific beneficiaries.</div>
+                    </div>
+                    <div class="option" data-value="sector">
+                        <div class="option-title">Sector/Field Impact</div>
+                        <div class="option-description">I want to help a specific sector or field (e.g., healthcare, education, technology industry).</div>
+                    </div>
+                    <div class="option" data-value="demographic">
+                        <div class="option-title">Demographic Impact</div>
+                        <div class="option-description">I want to help specific groups of people (e.g., elderly, students, marginalized communities).</div>
+                    </div>
+                    <div class="option" data-value="specific">
+                        <div class="option-title">Specific Community</div>
+                        <div class="option-description">I have a specific community or organization in mind that I want to work with directly.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="urgency">
+                <h3 class="question-title">How soon do you need to see impact?</h3>
+                <div class="slider-container">
+                    <input type="range" class="slider" id="urgencySlider" min="1" max="4" value="2">
+                    <div class="slider-labels">
+                        <span>Immediate<br>(< 1 year)</span>
+                        <span>Short-term<br>(1-2 years)</span>
+                        <span>Medium-term<br>(3-5 years)</span>
+                        <span>Long-term<br>(5+ years)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="uncertainty">
+                <h3 class="question-title">What's your tolerance for uncertainty?</h3>
+                <div class="option-grid">
+                    <div class="option" data-value="low">
+                        <div class="option-title">Low Uncertainty</div>
+                        <div class="option-description">I prefer tried-and-tested approaches with predictable outcomes. I want to see clear connections between my work and its impact.</div>
+                    </div>
+                    <div class="option" data-value="medium">
+                        <div class="option-title">Moderate Uncertainty</div>
+                        <div class="option-description">I'm comfortable with some risk if it means potentially greater impact. I can handle some ambiguity in outcomes.</div>
+                    </div>
+                    <div class="option" data-value="high">
+                        <div class="option-title">High Uncertainty</div>
+                        <div class="option-description">I'm excited by moonshot ideas and transformative possibilities, even if success is uncertain. I'm comfortable with failure as learning.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" disabled>Previous</button>
+                <button class="btn btn-primary" onclick="nextStage()">Next</button>
+            </div>
+        </div>
+
+        <!-- Stage 2: Current Context -->
+        <div class="stage-container" id="stage2">
+            <h2 class="stage-title">Your Current Context</h2>
+            <p class="stage-description">Understanding your constraints and opportunities helps identify feasible pathways.</p>
+
+            <div class="question" data-question="career">
+                <h3 class="question-title">What's your career stage?</h3>
+                <div class="option-grid">
+                    <div class="option" data-value="doctoral">
+                        <div class="option-title">Doctoral Student</div>
+                        <div class="option-description">Building foundational skills, establishing research identity, limited autonomy.</div>
+                    </div>
+                    <div class="option" data-value="postdoc">
+                        <div class="option-title">Postdoc/Early Career</div>
+                        <div class="option-description">Developing independence, building portfolio, seeking permanent position.</div>
+                    </div>
+                    <div class="option" data-value="junior">
+                        <div class="option-title">Junior Faculty/Researcher</div>
+                        <div class="option-description">Pre-tenure or equivalent, balancing multiple demands, building reputation.</div>
+                    </div>
+                    <div class="option" data-value="senior">
+                        <div class="option-title">Senior Faculty/Researcher</div>
+                        <div class="option-description">Established career, more flexibility, leadership opportunities.</div>
+                    </div>
+                    <div class="option" data-value="industry">
+                        <div class="option-title">Industry/Non-Academic</div>
+                        <div class="option-description">Different incentive structures, potentially more resources, different constraints.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="institutional">
+                <h3 class="question-title">How would you describe your institutional context?</h3>
+                <p class="multichoice-note">Select all that apply</p>
+                <div class="option-grid">
+                    <div class="option multichoice" data-value="traditional">
+                        <div class="option-title">Traditional Academic Metrics</div>
+                        <div class="option-description">My institution primarily values publications, grants, and teaching.</div>
+                    </div>
+                    <div class="option multichoice" data-value="engagement">
+                        <div class="option-title">Engagement Valued</div>
+                        <div class="option-description">Community engagement and public impact are recognized in evaluations.</div>
+                    </div>
+                    <div class="option multichoice" data-value="flexible">
+                        <div class="option-title">Flexible Environment</div>
+                        <div class="option-description">I have freedom to define my own success metrics.</div>
+                    </div>
+                    <div class="option multichoice" data-value="support">
+                        <div class="option-title">Institutional Support</div>
+                        <div class="option-description">Resources available for non-traditional impact activities (funding, staff, recognition).</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="resources">
+                <h3 class="question-title">What resources can you realistically commit?</h3>
+                <div class="slider-container">
+                    <input type="range" class="slider" id="resourceSlider" min="1" max="3" value="2">
+                    <div class="slider-labels">
+                        <span>Minimal<br>(10-20% time,<br>little funding)</span>
+                        <span>Moderate<br>(20-40% time,<br>some funding)</span>
+                        <span>Substantial<br>(40%+ time,<br>significant funding)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" onclick="previousStage()">Previous</button>
+                <button class="btn btn-primary" onclick="nextStage()">Next</button>
+            </div>
+        </div>
+
+        <!-- Stage 3: Research Readiness -->
+        <div class="stage-container" id="stage3">
+            <h2 class="stage-title">Research Readiness & Assets</h2>
+            <p class="stage-description">Your existing expertise and relationships shape which pathways are most accessible.</p>
+
+            <div class="question" data-question="maturity">
+                <h3 class="question-title">How would you describe your research maturity in your area?</h3>
+                <div class="option-grid">
+                    <div class="option" data-value="exploring">
+                        <div class="option-title">Exploring</div>
+                        <div class="option-description">Still developing core expertise, learning methods, building foundational knowledge.</div>
+                    </div>
+                    <div class="option" data-value="establishing">
+                        <div class="option-title">Establishing</div>
+                        <div class="option-description">Have solid methods and some findings, building a coherent research program.</div>
+                    </div>
+                    <div class="option" data-value="established">
+                        <div class="option-title">Established</div>
+                        <div class="option-description">Recognized expertise, significant body of work, clear research trajectory.</div>
+                    </div>
+                    <div class="option" data-value="leading">
+                        <div class="option-title">Leading</div>
+                        <div class="option-description">Considered a thought leader, shaping the field, extensive track record.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="networks">
+                <h3 class="question-title">What networks and relationships do you have?</h3>
+                <p class="multichoice-note">Select all that apply</p>
+                <div class="option-grid">
+                    <div class="option multichoice" data-value="academic">
+                        <div class="option-title">Strong Academic Network</div>
+                        <div class="option-description">Well-connected within my discipline and related fields.</div>
+                    </div>
+                    <div class="option multichoice" data-value="community">
+                        <div class="option-title">Community Relationships</div>
+                        <div class="option-description">Existing connections with community organizations or groups.</div>
+                    </div>
+                    <div class="option multichoice" data-value="policy">
+                        <div class="option-title">Policy Connections</div>
+                        <div class="option-description">Relationships with policymakers, government officials, or advocates.</div>
+                    </div>
+                    <div class="option multichoice" data-value="industry">
+                        <div class="option-title">Industry Network</div>
+                        <div class="option-description">Connections in relevant industries or private sector.</div>
+                    </div>
+                    <div class="option multichoice" data-value="media">
+                        <div class="option-title">Media Relationships</div>
+                        <div class="option-description">Experience with journalists or public communication platforms.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question" data-question="skills">
+                <h3 class="question-title">What special skills or assets do you bring?</h3>
+                <p class="multichoice-note">Select all that apply</p>
+                <div class="option-grid">
+                    <div class="option multichoice" data-value="technical">
+                        <div class="option-title">Technical Skills</div>
+                        <div class="option-description">Strong programming, data analysis, or tool development abilities.</div>
+                    </div>
+                    <div class="option multichoice" data-value="communication">
+                        <div class="option-title">Communication Skills</div>
+                        <div class="option-description">Ability to explain complex ideas to diverse audiences.</div>
+                    </div>
+                    <div class="option multichoice" data-value="facilitation">
+                        <div class="option-title">Facilitation Skills</div>
+                        <div class="option-description">Experience bringing diverse groups together productively.</div>
+                    </div>
+                    <div class="option multichoice" data-value="cultural">
+                        <div class="option-title">Cultural Competence</div>
+                        <div class="option-description">Deep understanding of specific communities or contexts.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" onclick="previousStage()">Previous</button>
+                <button class="btn btn-primary" onclick="generateResults()">See My Results</button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="stage-container" id="results">
+            <h2 class="results-title">Your Personalized Impact Strategy</h2>
+            
+            <div class="profile-summary">
+                <h3>Your Profile Summary</h3>
+                <div id="profileSummary"></div>
+            </div>
+
+            <div id="recommendations"></div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" id="exploreLink" class="explore-btn">Explore Your Recommended Pathways</a>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <button class="btn btn-secondary" onclick="startOver()">Start Over</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStage = 1;
+        const totalStages = 3;
+        const responses = {
+            constituency: null,
+            urgency: 2,
+            uncertainty: null,
+            careerStage: null,
+            institutional: [],
+            resources: 2,
+            maturity: null,
+            networks: [],
+            skills: []
+        };
+
+        // Initialize multichoice handling
+        document.querySelectorAll('.multichoice').forEach(option => {
+            option.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+
+        // Handle single choice options
+        document.querySelectorAll('.option:not(.multichoice)').forEach(option => {
+            option.addEventListener('click', function() {
+                const siblings = this.parentElement.querySelectorAll('.option');
+                siblings.forEach(sib => sib.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        function updateProgress() {
+            const percent = Math.round((currentStage / totalStages) * 100);
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressPercent').textContent = percent + '%';
+            
+            const stageNames = [
+                'Impact Vision & Values',
+                'Your Current Context',
+                'Research Readiness & Assets'
+            ];
+            
+            document.getElementById('progressText').textContent = 
+                currentStage <= totalStages 
+                    ? `Stage ${currentStage} of ${totalStages}: ${stageNames[currentStage - 1]}`
+                    : 'Complete: Your Results';
+        }
+
+        function collectStageData(stageNum) {
+            const stage = document.getElementById(`stage${stageNum}`);
+            
+            if (stageNum === 1) {
+                // Constituency
+                const constituency = stage.querySelector('[data-question="constituency"] .option.selected');
+                if (constituency) responses.constituency = constituency.dataset.value;
+                
+                // Urgency
+                responses.urgency = parseInt(document.getElementById('urgencySlider').value);
+                
+                // Uncertainty
+                const uncertainty = stage.querySelector('[data-question="uncertainty"] .option.selected');
+                if (uncertainty) responses.uncertainty = uncertainty.dataset.value;
+            } else if (stageNum === 2) {
+                // Career stage
+                const career = stage.querySelector('[data-question="career"] .option.selected');
+                if (career) responses.careerStage = career.dataset.value;
+                
+                // Institutional context
+                responses.institutional = [];
+                stage.querySelectorAll('[data-question="institutional"] .option.selected').forEach(opt => {
+                    responses.institutional.push(opt.dataset.value);
+                });
+                
+                // Resources
+                responses.resources = parseInt(document.getElementById('resourceSlider').value);
+            } else if (stageNum === 3) {
+                // Maturity
+                const maturity = stage.querySelector('[data-question="maturity"] .option.selected');
+                if (maturity) responses.maturity = maturity.dataset.value;
+                
+                // Networks
+                responses.networks = [];
+                stage.querySelectorAll('[data-question="networks"] .option.selected').forEach(opt => {
+                    responses.networks.push(opt.dataset.value);
+                });
+                
+                // Skills
+                responses.skills = [];
+                stage.querySelectorAll('[data-question="skills"] .option.selected').forEach(opt => {
+                    responses.skills.push(opt.dataset.value);
+                });
+            }
+            
+            // Debug log to check what's being collected
+            console.log(`Stage ${stageNum} data collected:`, responses);
+        }
+
+        function nextStage() {
+            collectStageData(currentStage);
+            
+            document.getElementById(`stage${currentStage}`).classList.remove('active');
+            currentStage++;
+            document.getElementById(`stage${currentStage}`).classList.add('active');
+            updateProgress();
+        }
+
+        function previousStage() {
+            document.getElementById(`stage${currentStage}`).classList.remove('active');
+            currentStage--;
+            document.getElementById(`stage${currentStage}`).classList.add('active');
+            updateProgress();
+        }
+
+        function generateResults() {
+            collectStageData(3);
+            
+            // Hide current stage
+            document.getElementById('stage3').classList.remove('active');
+            
+            // Generate recommendations based on responses
+            const recommendations = analyzeResponses();
+            
+            // Display results
+            displayResults(recommendations);
+            
+            // Show results
+            document.getElementById('results').classList.add('active');
+            updateProgress();
+        }
+
+        function analyzeResponses() {
+            const pathways = [];
+            const warnings = [];
+            const opportunities = [];
+            
+            // Map urgency values
+            const urgencyMap = ['immediate', 'short', 'medium', 'long'];
+            const resourceMap = ['minimal', 'moderate', 'substantial'];
+            
+            // Career stage considerations
+            const isEarlyCareer = ['doctoral', 'postdoc', 'junior'].includes(responses.careerStage);
+            const isSecure = ['senior', 'industry'].includes(responses.careerStage);
+            
+            // Score each pathway based on fit
+            const pathwayScores = {
+                1: 0, // Knowledge Creation
+                2: 0, // Educational
+                3: 0, // Community Partnership
+                4: 0, // Policy
+                5: 0, // Innovation
+                6: 0, // Public Engagement
+                7: 0  // Infrastructure
+            };
+            
+            // Community Partnership (3) - prioritize for specific constituencies with community networks
+            if ((responses.constituency === 'specific' || responses.constituency === 'demographic')) {
+                pathwayScores[3] += 3;
+                if (responses.networks.includes('community')) {
+                    pathwayScores[3] += 2;
+                    pathways.push({
+                        id: 3,
+                        reason: "Your focus on specific communities and existing relationships make partnership ideal.",
+                        priority: "primary",
+                        score: pathwayScores[3]
+                    });
+                } else {
+                    opportunities.push("Building community relationships could unlock powerful partnership opportunities.");
+                }
+            }
+            
+            // Knowledge Creation (1) - good for broad impact with longer timelines
+            if (responses.constituency === 'broad' || responses.urgency >= 3) {
+                pathwayScores[1] += 2;
+                if (responses.maturity === 'established' || responses.maturity === 'leading') {
+                    pathwayScores[1] += 1;
+                }
+                if (!responses.institutional.includes('traditional')) {
+                    pathwayScores[1] -= 1; // Lower priority if not valued
+                }
+            }
+            
+            // Educational (2) - strong for institutional support
+            if (responses.institutional.includes('engagement') || responses.institutional.includes('support')) {
+                pathwayScores[2] += 3;
+            }
+            if (responses.skills.includes('communication') || responses.skills.includes('facilitation')) {
+                pathwayScores[2] += 1;
+            }
+            
+            // Policy (4) - requires networks and maturity
+            if (responses.networks.includes('policy')) {
+                pathwayScores[4] += 2;
+                if (responses.maturity === 'established' || responses.maturity === 'leading') {
+                    pathwayScores[4] += 1;
+                }
+                if (isEarlyCareer) {
+                    pathwayScores[4] -= 1;
+                    warnings.push("Policy engagement can be high-risk for early career researchers - consider partnering with senior colleagues.");
+                }
+            }
+            
+            // Innovation (5) - technical skills and resources
+            if (responses.skills.includes('technical')) {
+                pathwayScores[5] += 2;
+                if (responses.resources >= 2) {
+                    pathwayScores[5] += 1;
+                }
+                if (responses.uncertainty === 'high') {
+                    pathwayScores[5] += 1;
+                }
+            }
+            
+            // Public Engagement (6) - communication skills and immediate impact
+            if (responses.skills.includes('communication')) {
+                pathwayScores[6] += 2;
+                if (responses.urgency <= 2) {
+                    pathwayScores[6] += 1;
+                }
+                if (responses.networks.includes('media')) {
+                    pathwayScores[6] += 1;
+                }
+                if (isEarlyCareer && !responses.institutional.includes('flexible')) {
+                    warnings.push("Public engagement can be professionally risky early in your career - start small and build gradually.");
+                }
+            }
+            
+            // Infrastructure (7) - for established researchers with long view
+            if (responses.maturity === 'established' || responses.maturity === 'leading') {
+                pathwayScores[7] += 2;
+                if (responses.urgency >= 3) {
+                    pathwayScores[7] += 1;
+                }
+                if (responses.resources >= 2) {
+                    pathwayScores[7] += 1;
+                }
+            }
+            
+            // Boost scores based on institutional support
+            if (responses.institutional.includes('flexible')) {
+                // All pathways get a small boost
+                Object.keys(pathwayScores).forEach(key => {
+                    pathwayScores[key] += 0.5;
+                });
+            }
+            
+            // Convert scores to recommendations
+            const scoredPathways = Object.entries(pathwayScores)
+                .filter(([id, score]) => score > 0)
+                .sort((a, b) => b[1] - a[1])
+                .map(([id, score]) => parseInt(id));
+            
+            // Add top pathways based on scores
+            scoredPathways.slice(0, 4).forEach((id, index) => {
+                const existingPathway = pathways.find(p => p.id === id);
+                if (!existingPathway) {
+                    pathways.push({
+                        id: id,
+                        reason: getPathwayReason(id, responses),
+                        priority: index < 2 ? "primary" : "secondary",
+                        score: pathwayScores[id]
+                    });
+                }
+            });
+            
+            // Ensure at least 2 recommendations
+            if (pathways.length < 2) {
+                if (!pathways.find(p => p.id === 1)) {
+                    pathways.push({
+                        id: 1,
+                        reason: "Knowledge creation provides a solid foundation for all other impact pathways.",
+                        priority: "primary"
+                    });
+                }
+                if (!pathways.find(p => p.id === 2)) {
+                    pathways.push({
+                        id: 2,
+                        reason: "Educational impact offers low-risk ways to expand your influence.",
+                        priority: "secondary"
+                    });
+                }
+            }
+            
+            // Sort by score and limit
+            pathways.sort((a, b) => (b.score || 0) - (a.score || 0));
+            
+            return {
+                pathways: pathways.slice(0, 4),
+                warnings: warnings,
+                opportunities: opportunities,
+                timeline: urgencyMap[responses.urgency - 1],
+                resources: resourceMap[responses.resources - 1]
+            };
+        }
+        
+        function getPathwayReason(id, responses) {
+            const reasons = {
+                1: "Your research context aligns well with traditional knowledge creation and dissemination.",
+                2: "Your institutional support and skills make educational impact highly feasible.",
+                3: "Your community focus and collaborative approach make partnership work ideal.",
+                4: "Your networks and expertise position you for meaningful policy influence.",
+                5: "Your technical skills and resources enable innovative solution development.",
+                6: "Your communication abilities can drive important public conversations.",
+                7: "Your established position enables you to build lasting infrastructure."
+            };
+            return reasons[id] || "This pathway aligns with your profile and goals.";
+        }
+
+        function displayResults(recommendations) {
+            // Create readable labels for display
+            const careerLabels = {
+                'doctoral': 'Doctoral Student',
+                'postdoc': 'Postdoc/Early Career',
+                'junior': 'Junior Faculty/Researcher',
+                'senior': 'Senior Faculty/Researcher',
+                'industry': 'Industry/Non-Academic'
+            };
+            
+            const uncertaintyLabels = {
+                'low': 'Low',
+                'medium': 'Moderate',
+                'high': 'High'
+            };
+            
+            // Display profile summary
+            const summaryHtml = `
+                <div class="profile-item">
+                    <span class="profile-label">Career Stage:</span>
+                    <span>${careerLabels[responses.careerStage] || 'Not specified'}</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Impact Timeline:</span>
+                    <span>${recommendations.timeline}</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Available Resources:</span>
+                    <span>${recommendations.resources}</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Risk Tolerance:</span>
+                    <span>${uncertaintyLabels[responses.uncertainty] || 'Not specified'}</span>
+                </div>
+            `;
+            document.getElementById('profileSummary').innerHTML = summaryHtml;
+            
+            // Display recommendations
+            let recsHtml = '';
+            
+            // Warnings first
+            if (recommendations.warnings.length > 0) {
+                recsHtml += '<div class="warning-box"><strong>Important Considerations:</strong><ul>';
+                recommendations.warnings.forEach(warning => {
+                    recsHtml += `<li>${warning}</li>`;
+                });
+                recsHtml += '</ul></div>';
+            }
+            
+            // Primary pathways
+            const primaryPathways = recommendations.pathways.filter(p => p.priority === 'primary');
+            if (primaryPathways.length > 0) {
+                recsHtml += '<div class="recommendation">';
+                recsHtml += '<h3 class="recommendation-title">Your Primary Impact Pathways</h3>';
+                recsHtml += '<ul class="pathway-list">';
+                primaryPathways.forEach(pathway => {
+                    recsHtml += `<li class="pathway-item">
+                        <span class="pathway-badge">Pathway ${pathway.id}</span>
+                        <span>${pathway.reason}</span>
+                    </li>`;
+                });
+                recsHtml += '</ul></div>';
+            }
+            
+            // Secondary pathways
+            const secondaryPathways = recommendations.pathways.filter(p => p.priority === 'secondary');
+            if (secondaryPathways.length > 0) {
+                recsHtml += '<div class="recommendation">';
+                recsHtml += '<h3 class="recommendation-title">Consider These Supporting Pathways</h3>';
+                recsHtml += '<ul class="pathway-list">';
+                secondaryPathways.forEach(pathway => {
+                    recsHtml += `<li class="pathway-item">
+                        <span class="pathway-badge">Pathway ${pathway.id}</span>
+                        <span>${pathway.reason}</span>
+                    </li>`;
+                });
+                recsHtml += '</ul></div>';
+            }
+            
+            // Opportunities
+            if (recommendations.opportunities.length > 0) {
+                recsHtml += '<div class="info-box"><strong>Growth Opportunities:</strong><ul>';
+                recommendations.opportunities.forEach(opp => {
+                    recsHtml += `<li>${opp}</li>`;
+                });
+                recsHtml += '</ul></div>';
+            }
+            
+            document.getElementById('recommendations').innerHTML = recsHtml;
+            
+            // Set up explore link
+            const pathwayIds = recommendations.pathways.map(p => p.id).join(',');
+            const exploreUrl = `/tools/impact-pathways/?highlight=${pathwayIds}&timeline=${recommendations.timeline}&resources=${recommendations.resources}`;
+            document.getElementById('exploreLink').href = exploreUrl;
+        }
+
+        function startOver() {
+            currentStage = 1;
+            
+            // Clear all selections
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            document.getElementById('urgencySlider').value = 2;
+            document.getElementById('resourceSlider').value = 2;
+            
+            // Reset responses
+            for (let key in responses) {
+                if (Array.isArray(responses[key])) {
+                    responses[key] = [];
+                } else if (typeof responses[key] === 'number') {
+                    responses[key] = 2;
+                } else {
+                    responses[key] = null;
+                }
+            }
+            
+            // Show first stage
+            document.getElementById('results').classList.remove('active');
+            document.getElementById('stage1').classList.add('active');
+            updateProgress();
+        }
+    </script>
+</body>
+</html>
