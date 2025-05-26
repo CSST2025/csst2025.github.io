@@ -275,9 +275,9 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <li><strong>Hsin-Ping Julia Hsu</strong> (George Mason) - doctoral student<br>
   <em>Research focus: how sociotechnical infrastructures—such as social platforms, peer networks, and generative AI (GenAI) tools—mediate people's access to support and services</em></li>
   <li><strong>Lan Li</strong> (UNC) - doctoral student<br>
-  <em>Research focus: how privacy data governance affects the work practices in higher-risk workplace contexts like healthcare</em></li>
+  <em>Research focus: how technologies shape and implicate how we find and conduct work</em></li>
   <li><strong>Neilly Tan</strong> (Washington) - doctoral student<br>
-  <em>Research focus: equitable data ecologies</em></li>
+  <em>Research focus: infrastructures of surveillance and managerial control in everyday environments</em></li>
 </ul>
 </div>
 
@@ -285,11 +285,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <h3>Katie Pine's Group</h3>
 <ul>
   <li><strong>Jiaying "Lizzy" Liu</strong> (UT Austin iSchool) - doctoral student<br>
-  <em>Research focus: the proliferation of community broadband networks in the U.S.</em></li>
+  <em>Research focus: how social, cultural, technological, and identity factors shape people's online health narratives and offline care-seeking experiences around mental health and well-being</em></li>
   <li><strong>Dylan Thomas Doyle</strong> (UC Boulder → Northwestern) - doctoral student → postdoc<br>
-  <em>Research focus: online community management - moderation, social imaginaries, and psychedelics information communities</em></li>
+  <em>Research focus: intersection of behavioral health, online platform design, and mental health technologies</em></li>
   <li><strong>Hiba Suraj</strong> (George Mason) - doctoral student<br>
-  <em>Research focus: develop a conceptual understanding of algorithms across social media platforms through the experience of content creators who encounter and resist shadowbanning</em></li>
+  <em>Research focus: Emergency Medical Services (EMS) that operate in high-stakes, time-critical settings</em></li>
 </ul>
 </div>
 
@@ -297,11 +297,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <h3>Matt Germonprez's Group</h3>
 <ul>
   <li><strong>Andrew Hamann</strong> (UC Irvine) - doctoral student<br>
-  <em>Research focus: how self-tracking can be harmful for members of at-risk populations when the data they produce is insecure</em></li>
+  <em>Research focus: downstream effects of data-intensive state policy on the municipal digital infrastructure</em></li>
   <li><strong>Farhana Shahid</strong> (Cornell) - doctoral student<br>
-  <em>Research focus: designing AI technologies for frontline care work and improving community-centered design methods to engage communities toward more sustainable research partnerships</em></li>
+  <em>Research focus: examines the cultural biases and systemic issues in content moderation systems, especially in non-Western contexts</em></li>
   <li><strong>Ji Eun (Jinny) Kim</strong> (Michigan) - doctoral student<br>
-  <em>Research focus: how communities produce social support with AI systems with a particular focus on care work</em></li>
+  <em>Research focus: sociotechnical systems that promote online prosociality in a data-driven, scalable way</em></li>
 </ul>
 </div>
 
@@ -309,11 +309,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <h3>Naz Andalibi's Group</h3>
 <ul>
   <li><strong>Jingchao Fang</strong> (Chicago) - postdoc<br>
-  <em>Research focus: how sociotechnical systems shape labor conditions and workers resistance</em></li>
+  <em>Research focus: designing knowledge-based socio-technical systems, specifically in the context of online education</em></li>
   <li><strong>Noopur Raval</strong> (UCLA) - junior faculty<br>
-  <em>Research focus: labor and technology from the global south</em></li>
+  <em>Research focus: gig economy platforms as a part of a larger socio-technical assemblage that redistributes life capacities among workers and consumers</em></li>
   <li><strong>Renkai Ma</strong> (Vanderbilt → U Cincinnati) - postdoc → junior faculty<br>
-  <em>Research focus: AI-supported decision-making and human-AI interaction</em></li>
+  <em>Research focus: intersection among human-computer interaction (HCI), social computing, and online safety</em></li>
 </ul>
 </div>
 
@@ -321,11 +321,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <h3>Oliver Haimson's Group</h3>
 <ul>
   <li><strong>Ari Schlesinger</strong> (Georgia) - junior faculty<br>
-  <em>Research focus: transgender user experience design to support and push against trans technology violence</em></li>
+  <em>Research focus: investigates the ways social issues become encoded in technical ecosystems to promote socially responsible computing</em></li>
   <li><strong>Tyler Musgrave</strong> (Michigan → Wayne State) - doctoral student → junior faculty<br>
-  <em>Research focus: AI LGBTQ+ content, moderation, and bias</em></li>
+  <em>Research focus: Through the lens of technomediated justice, I examine how digital systems mediate harm, repair, and power</em></li>
   <li><strong>Kim Fernandes</strong> (Toronto Info → Brown) - postdoc → junior faculty<br>
-  <em>Research focus: socio-technical change in state surveillance systems and communities' lived experiences of navigating and resisting/contesting those systems</em></li>
+  <em>Research focus: disability in Global South, who comes to count, under what circumstances, and how this impacts the life trajectories of the person whose experiences are made into data</em></li>
 </ul>
 </div>
 
@@ -333,10 +333,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <h3>Rosta Farzan's Group</h3>
 <ul>
   <li><strong>Hye Sun Yun</strong> (Northeastern) - doctoral student<br>
-  <em>Research focus: understands and improves the transparency and accountability aspects of computing systems by unpacking how various stakeholders interact with the systems throughout the machine learning pipeline</em></li>
+  <em>Research focus: design and evaluation of sociotechnical systems by embedding computational technology in healthcare to improve access to medical research information</em></li>
   <li><strong>Ifat Gazia</strong> (UMass Amherst) - doctoral student<br>
-  <em>Research focus: uncovering the complex techno-socio-political negotiations through which grassroots and civil society groups construct \"counter-data\" against state and corporate data on marginalized people</em></li>
+  <em>Research focus: intersection of digital infrastructures, platforms, and erasure</em></li>
   <li><strong>Zihan Gao</strong> (Wisconsin iSchool) - doctoral student<br>
-  <em>Research focus: how to provide informational support for people to develop financial capability through the design and the use of consumer-facing technologies</em></li>
+  <em>Research focus: design sociotechnical systems by reconceptualizing how technologies mediate human-place relationships through the lens of "localness"</em></li>
 </ul>
 </div>
