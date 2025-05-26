@@ -247,8 +247,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/cella-sum.jpg"/>
   <strong>Cella Sum</strong><br>
   <a href="mailto:csum@andrew.cmu.edu">csum@andrew.cmu.edu</a>
+  <p><a href="https://cella.io/" target="_blank">Website</a> </p>
+  <!-- https://cella.io/ -->
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
