@@ -5,6 +5,7 @@ permalink: /participants/
 toc: true
 toc_label: "Participant Groups"
 toc_icon: "users"
+classes: participants-layout
 ---
 
 ## Workshop Participants

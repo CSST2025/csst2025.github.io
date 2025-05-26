@@ -1,0 +1,80 @@
+// Custom styles for CSST 2025
+
+// Override max-width for participants page to allow full width
+.layout--single {
+  &.participants-layout {
+    #main {
+      @include breakpoint($large) {
+        // At large breakpoint, ensure content + sidebar fit within viewport
+        max-width: 100%;
+        padding-right: $right-sidebar-width-narrow;
+      }
+      
+      @include breakpoint($x-large) {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    }
+    
+    .page {
+      @include breakpoint($large) {
+        float: left;
+        width: calc(100% - #{$right-sidebar-width-narrow});
+        padding-right: 2em;
+      }
+      
+      @include breakpoint($x-large) {
+        width: calc(100% - #{$right-sidebar-width});
+        padding-right: 2em;
+      }
+    }
+    
+    // Adjust sidebar positioning to prevent overflow
+    .sidebar__right {
+      @include breakpoint($large) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $right-sidebar-width-narrow;
+        margin-right: 0;
+        padding-left: 1em;
+      }
+      
+      @include breakpoint($x-large) {
+        width: $right-sidebar-width;
+      }
+    }
+  }
+}
+
+// Ensure grids work properly at all sizes
+.participants-grid {
+  @include breakpoint($x-large) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+}
+
+// Better image handling in participant cards
+.participant-card, .mentee-card {
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+  }
+}
+
+// Prevent horizontal scroll on any screen size
+.participants-layout {
+  overflow-x: hidden;
+  
+  // Ensure the entire main container doesn't exceed viewport
+  #main {
+    @include breakpoint($large) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
