@@ -202,8 +202,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/jiaying-lizzy-liu.jpg"/>
   <strong>Jiaying Liu</strong><br>
   <a href="mailto:jiayingliu@utexas.edu">jiayingliu@utexas.edu</a>
+  <!-- https://liulizzy672.wixsite.com/website -->
+  <p><a href="https://liulizzy672.wixsite.com/website" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
