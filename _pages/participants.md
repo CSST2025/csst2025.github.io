@@ -184,8 +184,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/ji-eun-kim.jpg"/>
   <strong>Ji Eun (Jinny) Kim</strong><br>
   <a href="mailto:jieunkim@umich.edu">jieunkim@umich.edu</a>
+  <p><a href="https://www.si.umich.edu/people/ji-eun-kim" target="_blank">Website</a> </p>
+  
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
