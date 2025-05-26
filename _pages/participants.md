@@ -250,8 +250,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/hye-sun-yun.jpg"/>
   <strong>Hye Sun Yun</strong><br>
   <a href="mailto:yun.hy@northeastern.edu">yun.hy@northeastern.edu</a>
+  <p><a href="https://www.hyesunyun.com/" target="_blank">Website</a> </p>
+  
 </div>
 
 </div>
