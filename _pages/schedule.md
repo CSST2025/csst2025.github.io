@@ -14,7 +14,7 @@ The CSST 2025 Summer Institute runs from **Wednesday, May 28** through **Sunday,
 ## Interactive Calendar
 
 <div style="max-width: 100%; overflow-x: auto;">
-<iframe src="https://calendar.google.com/calendar/embed?src=c_b100781c5ab5b6a5e8ef3ed598a1b3110851455f7d1e8e1c1a2ebc18196452c0%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&mode=WEEK&showNav=0&showCalendars=0&showTitle=0&src=Y19iMTAwNzgxYzVhYjViNmE1ZThlZjNlZDU5OGExYjMxMTA4NTE0NTVmN2QxZThlMWMxYTJlYmMxODE5NjQ1MmMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23a79b8e" style="border-width:0" width="600" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
 ## Daily Schedule

@@ -19,7 +19,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Ingrid Erickson</h3>
-  <img src="/assets/images/mentors/ingrid-erickson.jpg"/>
+  <img src="/assets/images/organizers/ingrid-erickson.jpg"/>
   <p><em>Co-Organizer</em></p>
   <p>Syracuse University</p>
   <p><a href="mailto:imericks@syr.edu">imericks@syr.edu</a></p>
@@ -27,7 +27,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Josh Introne</h3>
-  <img src="/assets/images/mentors/josh-introne.jpg"/>
+  <img src="/assets/images/organizers/josh-introne.jpg"/>
   <p><em>Co-Organizer</em></p>
   <p>Syracuse University</p>
   <p><a href="mailto:jeintron@syr.edu">jeintron@syr.edu</a></p>
@@ -35,7 +35,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Jermaine Covington</h3>
-  <img src="/assets/images/mentors/jermaine-covington.jpg"/>
+  <img src="/assets/images/organizers/jermaine-covington.jpg"/>
   <p><em>Student Support</em></p>
   <p>Syracuse University</p>
   <p><a href="mailto:ljcoving@syr.edu">ljcoving@syr.edu</a></p>
@@ -43,7 +43,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Isabella Corieri</h3>
-  <img src="/assets/images/mentors/bella-corieri.png"/>
+  <img src="/assets/images/organizers/bella-corieri.png"/>
   <p><em>Student Support</em></p>
   <p>Syracuse University</p>
   <p><a href="mailto:ilcorier@syr.edu">ilcorier@syr.edu</a></p>
@@ -147,7 +147,8 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <!-- Note: Email addresses are included for workshop coordination purposes only -->
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
-  <strong>Dylan Thomas Doyle</strong><br>
+  <img src="/assets/images/mentees/dylan-doyle-burke.jpg"/>
+  <strong>Dylan Doyle-Burke</strong><br>
   <a href="mailto:dylan.doyle@colorado.edu">dylan.doyle@colorado.edu</a>
 </div>
 
@@ -227,8 +228,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/farhana-shahid.jpg"/>
   <strong>Farhana Shahid</strong><br>
   <a href="mailto:fs468@cornell.edu">fs468@cornell.edu</a>
+  <p><a href="https://farhana-shahid.github.io/" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
