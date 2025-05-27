@@ -203,8 +203,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/lan-li.png"/>
   <strong>Lan Li</strong><br>
   <a href="mailto:ll12@unc.edu">ll12@unc.edu</a>
+  <p><a href="https://sils.unc.edu/people/lan-li/" target="_blank">Website</a> </p>
+  
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
