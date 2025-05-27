@@ -24,20 +24,20 @@ The CSST 2025 Summer Institute runs from **Wednesday, May 28** through **Sunday,
 | Time | Activity |
 |------|----------|
 | 3:00 PM | Check-in begins at Minnowbrook |
-| 5:00-7:00 PM | **Welcome to CSST Mixer** |
-| 7:00-9:00 PM | **Group Dinner and Reception** |
+| 5:30-7:00 PM | **Mixer** |
+| 7:00-9:00 PM | **Group Dinner / Reception** |
 
 ### Thursday, May 29 - Foundations
 
 | Time | Activity |
 |------|----------|
-| 7:30-8:30 AM | Breakfast (morning walks available 7-9 AM) |
-| 9:00-10:00 AM | **Welcome and Introductions** |
-| 10:00 AM-12:00 PM | **Mentoring Session 1: Challenges and Aspirations** |
+| 7:00-8:30 AM | Breakfast / Morning walk |
+| 9:00-10:00 AM | **Daily overview: Welcome, introduction, schedule** |
+| 10:00 AM-12:00 PM | **Mentoring Session 1: Challenges & Aspirations** |
 | 12:00-1:00 PM | Lunch |
-| 1:00-3:00 PM | **Session 1: Introducing Your Research** |
+| 1:00-3:00 PM | **Session 1: Creative research introductions** |
 | 3:00-3:30 PM | Break |
-| 3:30-5:30 PM | **Session 2: Navigating Interdisciplinary Research Topics** |
+| 3:30-5:30 PM | **Session 2: Navigating interdisciplinary research topics** |
 | 5:30-7:00 PM | Free Time |
 | 7:00-9:00 PM | **Mentee/Mentor Dinner Groups** |
 
@@ -45,8 +45,8 @@ The CSST 2025 Summer Institute runs from **Wednesday, May 28** through **Sunday,
 
 | Time | Activity |
 |------|----------|
-| 7:30-8:30 AM | Breakfast |
-| 9:00-9:30 AM | Daily Overview |
+| 7:00-8:30 AM | Breakfast / Morning walk |
+| 9:00-9:30 AM | **Daily overview: Funding and engagement** |
 | 9:30 AM-12:00 PM | **Session 3: Impact Pathways Workshop** |
 | 1:00-2:00 PM | Lunch |
 | 2:00-5:00 PM | **Mentoring Session 2: Research meets World** |
@@ -57,23 +57,21 @@ The CSST 2025 Summer Institute runs from **Wednesday, May 28** through **Sunday,
 
 | Time | Activity |
 |------|----------|
-| 7:30-8:30 AM | Breakfast |
-| 9:00-9:30 AM | Daily Overview: Career Pathways |
-| 9:30-11:00 AM | **Session 4: Career Journeys** |
-| 11:00-11:30 AM | Break |
-| 11:30 AM-1:00 PM | **Mentoring Session 3: Navigating Careers** |
+| 7:00-8:30 AM | Breakfast / Morning walk |
+| 9:00-9:30 AM | **Daily overview: Career pathways** |
+| 9:30-11:30 AM | **Mentoring Session 3: Navigating careers** |
+| 11:30 AM-1:00 PM | **Session 4: Career Journeys** |
 | 1:00-2:00 PM | Boxed Lunches |
-| 2:00-3:30 PM | **Session 5: Crafting Your Scholarly Identity** |
-| 3:30-4:00 PM | Break |
-| 4:00-5:00 PM | **Mentoring Session 4: Wrap Up** |
-| 5:00-7:00 PM | Free Time |
+| 2:00-4:30 PM | **Session 5: Crafting Your Scholarly Identity** |
+| 4:30-7:00 PM | Free Time |
 | 7:00-9:00 PM | **Dinner as you like!** |
 
 ### Sunday, June 1 - Departure Day
 
 | Time | Activity |
 |------|----------|
-| 7:30-8:30 AM | Breakfast (Checkout at 8:30 AM) |
+| 7:00-8:30 AM | Breakfast / Morning walk |
+| 8:30 AM | Checkout |
 | 9:00-10:30 AM | **Session 6: Continuing the Conversation, CSST 2025 Farewell** |
 | 10:30 AM | Boxed Lunches |
 | 11:00 AM | Shuttle departs for airport |

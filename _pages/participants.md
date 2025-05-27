@@ -18,7 +18,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participants-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em; margin: 2em 0;">
 
-<div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="ingrid-erickson" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Ingrid Erickson</h3>
   <img src="/assets/images/organizers/ingrid-erickson.jpg"/>
   <p><em>Co-Organizer</em></p>
@@ -26,7 +26,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="mailto:imericks@syr.edu">imericks@syr.edu</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="josh-introne" style="background-color: #f8f9fa; padding: 1.5em; border-radius: 8px;">
   <h3>Josh Introne</h3>
   <img src="/assets/images/organizers/josh-introne.jpg"/>
   <p><em>Co-Organizer</em></p>
@@ -58,7 +58,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 
 <div class="participants-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em; margin: 2em 0;">
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="naz-andalibi" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: Headshot available at https://www.nazaninandalibi.net/ -->
   <h3>Naz Andalibi</h3>
   <img src="/assets/images/mentors/naz-anddalibi.jpg"/>
@@ -69,7 +69,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#naz-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="joel-chan" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: No headshot found on personal site, but available at UMD directory -->
   <h3>Joel Chan</h3>
   <img src="/assets/images/mentors/joel-chan.jpg"/>
@@ -80,7 +80,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#joel-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="rosta-farzan" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: No headshot found on personal site -->
   <h3>Rosta Farzan</h3>
   <img src="/assets/images/mentors/rosta-farzan.jpg"/>
@@ -91,7 +91,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#rosta-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="matt-germonprez" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: Headshot likely available at UNO faculty page -->
   <h3>Matt Germonprez</h3>
   <img src="/assets/images/mentors/matt-germonprez.jpg"/>
@@ -102,7 +102,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#matt-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="oliver-haimson" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: Headshot available at https://oliverhaimson.com/ -->
   <h3>Oliver Haimson</h3>
   <img src="/assets/images/mentors/oliver-haimson.png"/>
@@ -113,7 +113,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#oliver-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="katie-pine" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: Headshot available at https://www.kpine.net/ -->
   <h3>Katie Pine</h3>
    <img src="/assets/images/mentors/kaite-pine.jpg"/>
@@ -124,7 +124,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
   <p><a href="#katie-group">View mentee group →</a></p>
 </div>
 
-<div class="participant-card" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
+<div class="participant-card" id="elizabeth-watkins" style="background-color: #e8f4f8; padding: 1.5em; border-radius: 8px;">
   <!-- Note: Headshot may be available at Intel Labs or LinkedIn -->
   <h3>Elizabeth Watkins</h3>
    <img src="/assets/images/mentors/elizabeth-watkins.jpg"/>
