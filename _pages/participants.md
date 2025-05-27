@@ -159,8 +159,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+ <img src="/assets/images/mentees/kim-fernandes.jpg"/>
   <strong>Kim Fernandes</strong><br>
   <a href="mailto:kim.fernandes@utoronto.ca">kim.fernandes@utoronto.ca</a>
+    <p><a href="https://kimfernandes.com/" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
@@ -179,8 +181,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/julia-hsu.jpg"/>
   <strong>Hsin-Ping Julia Hsu</strong><br>
   <a href="mailto:hhsu2@gmu.edu">hhsu2@gmu.edu</a>
+  <p><a href="https://juliahsu.github.io" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
@@ -210,8 +214,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/renkai-ma.jpg"/>
   <strong>Renkai Ma</strong><br>
   <a href="mailto:renkai.ma@vanderbilt.edu">renkai.ma@vanderbilt.edu</a>
+   <p><a href="www.renkaima.xyz" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
