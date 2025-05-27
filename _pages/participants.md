@@ -154,8 +154,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+  <img src="/assets/images/mentees/jingchao-fang.png"/>
   <strong>Jingchao Fang</strong><br>
   <a href="mailto:jcfang@uchicago.edu">jcfang@uchicago.edu</a>
+  <p><a href="https://jc-fang.github.io/" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
