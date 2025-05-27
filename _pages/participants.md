@@ -241,8 +241,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+ <img src="/assets/images/mentees/ari-schlesinger.png"/>
   <strong>Ari Schlesinger</strong><br>
   <a href="mailto:Ari.schlesinger@uga.edu">Ari.schlesinger@uga.edu</a>
+  <p><a href="https://arischlesinger.com/" target="_blank">Website</a> </p>
+  
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
