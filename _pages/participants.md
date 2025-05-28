@@ -178,6 +178,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/andrew-hamann.png"/>
   <strong>Andrew Hamann</strong><br>
   <a href="mailto:ahamann@uci.edu">ahamann@uci.edu</a>
 </div>
@@ -226,13 +227,18 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/tyler-musgrave.jpg"/>
   <strong>Tyler Musgrave</strong><br>
   <a href="mailto:tylermusgrave3@gmail.com">tylermusgrave3@gmail.com</a>
+  <p><a href="http://bit.ly/tylermusgrave" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+
+  <img src="/assets/images/mentees/sachita-nishal.jpeg"/>
   <strong>Sachita Nishal</strong><br>
   <a href="mailto:sachita.nishal@gmail.com">sachita.nishal@gmail.com</a>
+  <p><a href="https://nishalsach.github.io/" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
@@ -256,6 +262,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/hiba-siraj.jpeg"/>
   <strong>Hiba Siraj</strong><br>
   <a href="mailto:hsiraj@gmu.edu">hsiraj@gmu.edu</a>
 </div>
@@ -316,9 +323,9 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 <ul>
   <li><strong>Jiaying "Lizzy" Liu</strong> (UT Austin iSchool) - doctoral student<br>
   <em>Research focus: how social, cultural, technological, and identity factors shape people's online health narratives and offline care-seeking experiences around mental health and well-being</em></li>
-  <li><strong>Dylan Thomas Doyle</strong> (UC Boulder → Northwestern) - doctoral student → postdoc<br>
+  <li><strong>Dylan Doyle-Burke</strong> (UC Boulder → Northwestern) - doctoral student → postdoc<br>
   <em>Research focus: intersection of behavioral health, online platform design, and mental health technologies</em></li>
-  <li><strong>Hiba Suraj</strong> (George Mason) - doctoral student<br>
+  <li><strong>Hiba Siraj</strong> (George Mason) - doctoral student<br>
   <em>Research focus: Emergency Medical Services (EMS) that operate in high-stakes, time-critical settings</em></li>
 </ul>
 </div>
