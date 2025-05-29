@@ -34,7 +34,10 @@ Explore the challenges and opportunities of interdisciplinary research through t
 - Practice responding to cross-disciplinary reviewer comments
 - Learn strategies for positioning your work
 
-[Papers for this station](https://drive.google.com/drive/folders/1ck6__ePtEPNL-qpJNBCWHgGdNOyDdMhkbFFtHgOQGN2MlPvjOYmEJeX1DWuiM7EgZjFq8XAl?usp=drive_link)
+**Resources**
+
+- [Interdisciplinary publishing guide](https://docs.google.com/document/d/1R0KwCXU_fts8g2znHXfBnaz4Iw1ijHvUmTP2bgwcOys/edit?tab=t.0#heading=h.rta1aov07lwu)
+- [Papers for this station](https://drive.google.com/drive/folders/1ck6__ePtEPNL-qpJNBCWHgGdNOyDdMhkbFFtHgOQGN2MlPvjOYmEJeX1DWuiM7EgZjFq8XAl?usp=drive_link)
 
 ### Station 2: Managing complex collaborations
 *Facilitators: [Nazanin Andalibi](/participants/#naz-andalibi), [Elizabeth Watkins](/participants/#elizabeth-watkins)*
@@ -43,6 +46,9 @@ Explore the challenges and opportunities of interdisciplinary research through t
 - Apply research-based best practices for team science
 - Develop conflict resolution strategies
 
+**Resources**
+- [Best practices for Interdisciplinary Collaboration](https://docs.google.com/document/d/1kHFNyQeOfADBT0wqotzYC_nU4TK3F7CJzn3Q4G10EVw/edit?tab=t.0#heading=h.ow2nvmktlp0i)
+
 ### Station 3: Communicating Your Interdisciplinary Identity
 *Facilitators: [Katie Pine](/participants/#katie-pine), [Matt Germonprez](/participants/#matt-germonprez)*
 
@@ -50,7 +56,8 @@ Explore the challenges and opportunities of interdisciplinary research through t
 - Develop micro-pitches for different disciplinary contexts
 - Build skills in "bridge-before-build" approaches
 
-[View detailed session materials →](https://docs.google.com/document/d/1aKTtfM-0vYwsf8D1TlxhZnGhEEdTilP8ANUAc-nZF4U/edit)
+**Resources**
+- [Disciplinary Translation Toolkit](https://docs.google.com/document/d/1tuMaurHWTw15JLZXrV7Jeq7KPQM4sStOXymZHV0kDUY/edit?tab=t.0#heading=h.3igyebzgg3ym)
 
 ---
 
