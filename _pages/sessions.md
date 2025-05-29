@@ -11,14 +11,14 @@ toc_icon: "chalkboard-teacher"
 
 The CSST 2025 Summer Institute features six core workshop sessions designed to support your development as a sociotechnical researcher. Each session combines expert guidance, hands-on activities, and peer learning.
 
+[View detailed session materials →](https://docs.google.com/document/d/1aKTtfM-0vYwsf8D1TlxhZnGhEEdTilP8ANUAc-nZF4U/edit)
+
 ---
 
 ## Session 1: Creative Research Introductions
 **Thursday, May 29, 1:00-3:00 PM**
 
 Learn to effectively communicate your research across disciplinary boundaries. This session will help you develop clear, compelling ways to describe your work to diverse audiences.
-
-[View detailed session materials →](https://docs.google.com/document/d/1aKTtfM-0vYwsf8D1TlxhZnGhEEdTilP8ANUAc-nZF4U/edit)
 
 ---
 
@@ -33,6 +33,8 @@ Explore the challenges and opportunities of interdisciplinary research through t
 - Analyze interdisciplinary papers to understand terminology, citations, and methods
 - Practice responding to cross-disciplinary reviewer comments
 - Learn strategies for positioning your work
+
+[Papers for this station](https://drive.google.com/drive/folders/1ck6__ePtEPNL-qpJNBCWHgGdNOyDdMhkbFFtHgOQGN2MlPvjOYmEJeX1DWuiM7EgZjFq8XAl?usp=drive_link)
 
 ### Station 2: Managing complex collaborations
 *Facilitators: [Nazanin Andalibi](/participants/#naz-andalibi), [Elizabeth Watkins](/participants/#elizabeth-watkins)*
@@ -58,7 +60,7 @@ Explore the challenges and opportunities of interdisciplinary research through t
 Navigate the interface between research and real-world impact through two parallel tracks:
 
 ### Station 1: Funding Landscape Navigation
-*Facilitators: Dan Cosley (NSF, virtual), [Josh Introne](/participants/#josh-introne), [Rosta Farzan](/participants/#rosta-farzan)*
+*Facilitators: Dan Cosley (NSF, virtual), [Josh Introne](/participants/#josh-introne), [Rosta Farzan](/participants/#rosta-farzan), [Katie Pine](/participants/#katie-pine), and possibly [Joel Chan](/participants/#joel-chan)*
 
 - Current NSF environment and policy changes (with Dan Cosley)
 - Alternative funding sources: foundations, industry, federal agencies
@@ -78,7 +80,7 @@ Navigate the interface between research and real-world impact through two parall
 ## Session 4: Career Journeys
 **Saturday, May 31, 11:30 AM-1:00 PM**
 
-*Presenters: [Joel Chan](/participants/#joel-chan), [Elizabeth Watkins](/participants/#elizabeth-watkins), [Josh Introne](/participants/#josh-introne), [Nazanin Andalibi](/participants/#naz-andalibi), and one additional mentor*
+*Presenters: [Joel Chan](/participants/#joel-chan), [Elizabeth Watkins](/participants/#elizabeth-watkins), [Josh Introne](/participants/#josh-introne), [Nazanin Andalibi](/participants/#naz-andalibi), [Oliver Haimson](/participants/#oliver-haimson)*
 
 Five mentors present "journey maps" of their career trajectories, highlighting:
 - Key decision points and unexpected turns
