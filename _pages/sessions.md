@@ -48,7 +48,6 @@ Explore the challenges and opportunities of interdisciplinary research through t
 
 **Resources**
 - [Best practices for Interdisciplinary Collaboration](https://docs.google.com/document/d/1kHFNyQeOfADBT0wqotzYC_nU4TK3F7CJzn3Q4G10EVw/edit?tab=t.0#heading=h.ow2nvmktlp0i)
-
 - [Scenarios](https://docs.google.com/document/d/1djStNddW3j7wt9iF7eF16kg60zevSTd6r8mlyXyndn0/edit)
 
 ### Station 3: Communicating Your Interdisciplinary Identity
@@ -75,6 +74,13 @@ Navigate the interface between research and real-world impact through two parall
 - Alternative funding sources: foundations, industry, federal agencies
 - Hands-on proposal development workshop
 
+**Resources**
+- [Funding Landscape Matrix](https://csst2025.github.io/tools/funding-matrix/)
+- [Proposal Development Worksheet](https://docs.google.com/document/u/1/d/1pjqWSoU6lwDnHyb9yK40DQnF0HIuHOmjSysQMAYK7dU/edit)
+- [Proposal Development Guide](https://docs.google.com/document/u/1/d/1hqnzzUFFV-B2h3Ri_FZLfNf5xSUy2rwVenPG85vl0zU/edit)
+- [Positioning Your Research](https://docs.google.com/document/u/1/d/1o78lZc3FrvRUtqOZaJW_Uw2DuSXdQDDUz2F4Izq7xl8/edit)
+
+
 ### Station 2: Impact Beyond Academia
 *Facilitators: [Matt Germonprez](/participants/#matt-germonprez), [Oliver Haimson](/participants/#oliver-haimson), [Elizabeth Watkins](/participants/#elizabeth-watkins)*
 
@@ -82,8 +88,11 @@ Navigate the interface between research and real-world impact through two parall
 - Strategic decision-making for impact planning
 - Develop personalized impact strategies
 
-[View detailed session materials →](https://docs.google.com/document/d/1aKTtfM-0vYwsf8D1TlxhZnGhEEdTilP8ANUAc-nZF4U/edit)
-
+**Resources**
+- [Impact Pathways Framework](https://docs.google.com/document/u/1/d/13aWma4GXTXJMpQfPHz3cWWh5OSQQuCN3JvHKQNti6aM/edit)
+- [Impact Planning Guide](https://docs.google.com/document/u/1/d/1aCV1p2Qcms2FACprYqP5lC8TAqfLnBfTIJn0J48TaFA/edit)
+- [Online Interactive Impact Matrix](https://csst2025.github.io/tools/impact-pathways/)
+- [Interactive Planning Tool](https://csst2025.github.io/tools/impact-planning/)
 ---
 
 ## Session 4: Career Journeys
