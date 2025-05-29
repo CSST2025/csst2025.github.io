@@ -74,6 +74,8 @@ Navigate the interface between research and real-world impact through two parall
 - Alternative funding sources: foundations, industry, federal agencies
 - Hands-on proposal development workshop
 
+_**Note:** Teams should create a copy of the [Proposal Development Worksheet](https://docs.google.com/document/u/1/d/1pjqWSoU6lwDnHyb9yK40DQnF0HIuHOmjSysQMAYK7dU/edit) in the same folder; mentors can [look at proposals and comment](https://drive.google.com/drive/folders/1sap1-J54lToG334p-tKycrSvoGo4cmGd?usp=drive_link) as they develop._
+
 **Resources**
 - [Funding Landscape Matrix](https://csst2025.github.io/tools/funding-matrix/)
 - [Proposal Development Worksheet](https://docs.google.com/document/u/1/d/1pjqWSoU6lwDnHyb9yK40DQnF0HIuHOmjSysQMAYK7dU/edit)
@@ -93,6 +95,7 @@ Navigate the interface between research and real-world impact through two parall
 - [Impact Planning Guide](https://docs.google.com/document/u/1/d/1aCV1p2Qcms2FACprYqP5lC8TAqfLnBfTIJn0J48TaFA/edit)
 - [Online Interactive Impact Matrix](https://csst2025.github.io/tools/impact-pathways/)
 - [Interactive Planning Tool](https://csst2025.github.io/tools/impact-planning/)
+
 ---
 
 ## Session 4: Career Journeys
