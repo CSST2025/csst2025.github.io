@@ -49,6 +49,8 @@ Explore the challenges and opportunities of interdisciplinary research through t
 **Resources**
 - [Best practices for Interdisciplinary Collaboration](https://docs.google.com/document/d/1kHFNyQeOfADBT0wqotzYC_nU4TK3F7CJzn3Q4G10EVw/edit?tab=t.0#heading=h.ow2nvmktlp0i)
 
+- [Scenarios](https://docs.google.com/document/d/1djStNddW3j7wt9iF7eF16kg60zevSTd6r8mlyXyndn0/edit)
+
 ### Station 3: Communicating Your Interdisciplinary Identity
 *Facilitators: [Katie Pine](/participants/#katie-pine), [Matt Germonprez](/participants/#matt-germonprez)*
 
