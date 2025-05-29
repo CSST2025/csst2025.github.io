@@ -246,8 +246,11 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/noopur-raval.png"/>
   <strong>Noopur Raval</strong><br>
   <a href="mailto:raval@seis.ucla.edu">raval@seis.ucla.edu</a>
+  <p><a href="https://noopur.cc/" target="_blank">Website</a> </p>
+  
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
