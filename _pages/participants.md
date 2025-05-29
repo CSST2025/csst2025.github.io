@@ -168,7 +168,7 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
-<img src="/assets/images/mentees/zihan-gao.JPG"
+<img src="/assets/images/mentees/zihan-gao.JPG"/>
   <strong>Zihan Gao</strong><br>
   <a href="mailto:zihan.gao@wisc.edu">zihan.gao@wisc.edu</a>
   <p><a href="https://www.zihangao.com/" target="_blank">Website</a> </p>
@@ -278,8 +278,10 @@ The CSST 2025 Summer Institute brings together 21 mentees, 7 mentors, and 3 orga
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
+<img src="/assets/images/mentees/neilly-tan.jpeg"/>
   <strong>Neilly Tan</strong><br>
   <a href="mailto:nhtan@uw.edu">nhtan@uw.edu</a>
+  <p><a href="http://neillytan.com/" target="_blank">Website</a> </p>
 </div>
 
 <div class="mentee-card" style="background-color: #f0f8e8; padding: 1em; border-radius: 6px;">
